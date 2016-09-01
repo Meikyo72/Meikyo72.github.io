@@ -335,7 +335,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	background-image: url('digg.png');
 	}
 .social a[href*='facebook.com'] {
-	background-image: url('resources/pics/facebook.png');
+	background-image: url('facebook.png');
 	}
 .social a[href*='last.fm'], .social a[href*='lastfm'] {
 	background-image: url('lastfm.png');
@@ -344,7 +344,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	background-image: url('rss.png');
 	}
 .social a[href*='twitter.com'] {
-	background-image: url('resources/pics/twitter.png');
+	background-image: url('twitter.png');
 	}
 
 #contentinfo .social a:hover{
