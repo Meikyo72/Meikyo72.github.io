@@ -1,0 +1,17 @@
+body{ 
+background-color: cyan;
+}
+ol li{
+	color: grey;
+	font-family: arial;
+}
+ul {
+	background-color: hotpink;
+	font-family: courier;
+}
+.cent {
+	text-align: center;
+}
+#right {
+	text-align: right;
+}
