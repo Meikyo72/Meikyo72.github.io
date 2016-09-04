@@ -1,5 +1,47 @@
 header {
-	background-color: green;
-	height: 1.5 em;
-	margin-left: 2 em;
+	display: block;
+	background-color: #9AE85A;
+	height: 15px;
+	width: 22em;
+	margin-left: 10px;
+	
+}
+#tabell {
+	display: block;
+	width: 25em;
+}
+#tabell p{
+	text-align: center;
+}
+table {
+	border: solid grey;
+	background-color: #D5E0B1;
+}
+th {
+	border: dashed #9C6816;
+	background-color: #CCB849;
+	padding: 2px;
+}
+td {
+	border: dotted grey;
+	padding: 2px;
+}
+.place {
+	text-align: center;
+}
+#first {
+	background-color: gold;
+}
+#second {
+	background-color: silver;
+}
+#third {
+	background-color: #B07E2E;
+}
+.land {
+	text-align: right;
+}
+p {
+	position: relative;
+	margin-bottom: 0;
 }
