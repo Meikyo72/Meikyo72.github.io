@@ -11,16 +11,26 @@
 }
 #first {
 	background-color: pink;
+	height: 5em;
+	width: 5em;
 }
 #second {
 	background-color: green;
+	height: 10em;
+	width: 3em;
 }
 #third {
 	background-color: blue;
+	width: 7em;
+	height: 5em;
 }
 #fourth {
 	background-color: grey;
+	width: 10em;
+	height: 5em;
 }
 #fifth {
 	background-color: beige;
+	width: 7em;
+	height: 10em;
 }
