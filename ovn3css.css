@@ -29,16 +29,20 @@
 	background-color: blue;
 	width: 7em;
 	height: 5em;
+	margin-left: 10em;
 }
 #fourth {
 	position: absolute;
 	background-color: grey;
 	width: 10em;
 	height: 5em;
+	margin-top: 3em;
+	margin-left: 4em;
 }
 #fifth {
 	position: absolute;
 	background-color: beige;
 	width: 7em;
 	height: 10em;
+	margin-top: 7em;
 }
