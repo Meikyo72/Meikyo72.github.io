@@ -1,4 +1,5 @@
 #mainwrapper {
+	margin-left: 15px;
 	
 }
 #boxwrapper {
@@ -15,21 +16,25 @@
 	width: 5em;
 }
 #second {
+	position: relative;
 	background-color: green;
 	height: 10em;
 	width: 3em;
 }
 #third {
+	position: relative;
 	background-color: blue;
 	width: 7em;
 	height: 5em;
 }
 #fourth {
+	position: relative;
 	background-color: grey;
 	width: 10em;
 	height: 5em;
 }
 #fifth {
+	position: relative;
 	background-color: beige;
 	width: 7em;
 	height: 10em;
