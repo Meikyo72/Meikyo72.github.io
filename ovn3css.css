@@ -16,25 +16,25 @@
 	width: 5em;
 }
 #second {
-	position: relative;
+	position: absolute;
 	background-color: green;
 	height: 10em;
 	width: 3em;
 }
 #third {
-	position: relative;
+	position: absolute;
 	background-color: blue;
 	width: 7em;
 	height: 5em;
 }
 #fourth {
-	position: relative;
+	position: absolute;
 	background-color: grey;
 	width: 10em;
 	height: 5em;
 }
 #fifth {
-	position: relative;
+	position: absolute;
 	background-color: beige;
 	width: 7em;
 	height: 10em;
