@@ -8,3 +8,6 @@ h1, h2 {
 ul {
 	text-align: center;
 }
+ul>li{
+	text-align: left;
+}
