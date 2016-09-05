@@ -6,7 +6,8 @@ h1, h2 {
 	text-align: center;
 }
 ul {
-	text-align: center;
+	display: block;
+	position: center;
 }
 ul>li{
 	text-align: left;
