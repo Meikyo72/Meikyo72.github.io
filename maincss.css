@@ -12,6 +12,9 @@ ul {
 ul>li{
 	text-align: left;
 }
+a {
+	color: black;
+}
 a:hover {
 	font-size: 120%;
 }
