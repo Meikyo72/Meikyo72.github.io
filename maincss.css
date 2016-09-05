@@ -3,4 +3,8 @@ body {
 }
 h1, h2 {
 	background-color: #B5B1D9;
+	text-align: center;
+}
+ul {
+	text-align: center;
 }
