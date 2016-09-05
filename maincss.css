@@ -12,3 +12,7 @@ ul {
 ul>li{
 	text-align: left;
 }
+footer {
+	background-color: #615A9B;
+	margin-bottom: 0;
+}
