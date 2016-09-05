@@ -12,6 +12,12 @@ ul {
 ul>li{
 	text-align: left;
 }
+a:hover {
+	font-size: 120%;
+}
+a:visited {
+	color: black;
+}
 footer {
 	display: block;
 	position: fixed;
