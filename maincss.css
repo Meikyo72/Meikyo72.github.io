@@ -7,7 +7,7 @@ h1, h2 {
 }
 ul {
 	display: block;
-	position: center;
+	margin-left: 50%;
 }
 ul>li{
 	text-align: left;
