@@ -1,9 +1,10 @@
 body {
-	background-color: #DEDCF1;
+	background-color: #CACBCF;
 }
 h1, h2 {
-	background-color: #B5B1D9;
+	background-color: #0429CF;
 	text-align: center;
+	color: white;
 }
 ul {
 	display: block;
@@ -25,8 +26,9 @@ footer {
 	display: block;
 	position: fixed;
 	width: 50%;
-	background-color: #615A9B;
+	background-color: #00051A;
 	margin-left: 25%;
 	bottom: 0;
 	text-align: center;
+	color: white;
 }
