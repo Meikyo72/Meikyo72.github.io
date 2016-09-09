@@ -12,6 +12,11 @@ h1, h2 {
 	padding: 0;
 	margin-right: 0;
 	margin-bottom: 0;
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 28px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 700;
 }
 
 nav > ul {
@@ -36,6 +41,8 @@ nav  li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	font-family: Verdana,Geneva,sans-serif;
+	font-variant: small-caps;
 }
 nav li a:visited {
 	color: white;
@@ -45,8 +52,8 @@ nav li a:visited {
 	width: 100%;
 }
 ul {
-	margin-left: 43%;
-	margin-right: 43%;
+	margin-left: 30%;
+	margin-right: 30%;
 }
 .alist {
 	border-radius: 25px;
@@ -57,9 +64,15 @@ ul {
 	box-shadow: 10px 10px 5px orange;
 	opacity: 0.9;
 	height: 20em;
+	width: 40%;
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 17.6px;
 }
 .alist li{
-	margin: 1em;
+	margin: 2em;
 }
 ul>li{
 	text-align: left;
