@@ -1,0 +1,10 @@
+audio {
+	display: block;
+}
+video {
+	display: block;
+}
+.dispAudio {
+	width: 320px;
+	height: 240px;
+}
