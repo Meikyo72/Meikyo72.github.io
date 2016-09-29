@@ -36,6 +36,18 @@ a:hover {
 a:visited {
 	color: white;
 }
+body {
+	background-color: lightgrey;
+}
+.muncher {
+	width: 800px;
+	height: 700px;
+	margin-top: 4em;
+}
+.muncher img{
+	float: left;
+	padding-right: 1em;
+}
 footer {
 	position: fixed;
 	width: 50%;
