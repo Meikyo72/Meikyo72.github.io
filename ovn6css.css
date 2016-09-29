@@ -48,6 +48,21 @@ body {
 	float: left;
 	padding-right: 1em;
 }
+.table {
+	border: 1px solid black;
+	display: table;
+	width: 20em;
+	height: 20em;
+	margin: 5em;
+}
+.table > div {
+	display: table-row;
+	border: 1px solid black;
+}
+.table > div > div {
+	display: table-cell;
+	border: 1px solid black;
+}
 footer {
 	position: fixed;
 	width: 50%;
