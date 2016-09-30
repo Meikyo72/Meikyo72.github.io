@@ -103,7 +103,7 @@ body {
 	.navigation, .sida { flex: 1 auto;} 
 }
 @media all and (min-width: 800px) {
-	.innehall { flex: 2 0px;}
+	.innehall { flex: 4 0px;}
 	.navigation { order: 1;}
 	.innehall { order: 2; }
 	.sida { order: 3; }
