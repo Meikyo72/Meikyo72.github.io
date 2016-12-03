@@ -7,9 +7,55 @@
 	let button2=document.getElementById("rensa");
 	button2.onclick=rensa;
 	var statusB=document.getElementById('statusB');
-	let expbutton=document.getElementById('exp');
-	expbutton.onclick=expImg;
 	
+	let expbutton=document.getElementById('exp');
+	expbutton.addEventListener('click', expB);
+function expB(event){
+	expImg();
+}
+
+	let impbutton=document.getElementById('imp');
+	impbutton.addEventListener('click', impB);
+function impB(event){
+	impImg();
+}
+
+	let mencirk=document.getElementById('mencirk');
+	mencirk.addEventListener('click', menCir);
+function menCir(event){
+	drawCir(canvas, context);
+}
+
+	let menrekt=document.getElementById('menrekt');
+	menrekt.addEventListener('click', menRek);
+function menRek(event){
+	drawRec(canvas, context);
+}
+
+	let mentria=document.getElementById('mentria');
+	mentria.addEventListener('click', menTri);
+function menTri(event){
+	drawTri(canvas, context);
+}
+
+	let menpoly=document.getElementById('menpoly');
+	menpoly.addEventListener('click', menPol);
+function menPol(event){
+	drawPolygon(canvas, context);
+}
+
+	let menrens=document.getElementById('menrens');
+	menrens.addEventListener('click', menRen);
+function menRen(event){
+	rensa();
+}
+
+	let menexpo=document.getElementById('menexpo');
+	menexpo.addEventListener('click', menExp);
+function menExp(event){
+	expImg();
+}
+
 
 
 function rita(){
@@ -249,6 +295,11 @@ function drawPolygon(canvas, context){
 		context.lineTo(x,y);
 		context.stroke();
 		statusB.innerHTML='Ritar polygon Markera minst 5 punkter och avsluta med Rita Polygon ';
+	let menslut=document.getElementById('menslut');
+	menslut.addEventListener('click', menSlu);
+		function menSlu(event){
+			avsluta();
+		}	
 		let button3=document.getElementById("avbryt");
 		button3.onclick=avsluta;
 		function avsluta(){	
@@ -267,10 +318,21 @@ function drawPolygon(canvas, context){
 	
 }
 function expImg(){
-	window.open(document.getElementById('context').toDataURL("image/png"));
+	localStorage.setItem(canvas, canvas.toDataURL());
+	statusB.innerHTML='Sparar i HTML5 Local Storage ';
+}
+function impImg(){
+	statusB.innerHTML='Hämtar från HTML5 Local Storage ';
+	let dataURL=localStorage.getItem(canvas);
+	let img = new Image;
+	img.src = dataURL;
+	img.onload = function(){
+		context.drawImage(img, 0, 0);
+	};
 }
 
 function rensa(){
+	statusB.innerHTML='Rensar Canvas ';
 	let canvas=document.getElementById("can");
 	let context=canvas.getContext("2d");
 	context.clearRect(0, 0, canvas.width, canvas.height);

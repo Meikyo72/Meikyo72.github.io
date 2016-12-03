@@ -90,39 +90,91 @@ a:visited {
 }
 #secwrapper {
 	float:left;
+	background-color: rgba(169, 169, 169, 0.8);
+	padding:2px;
+	border: solid black 2px;
 }
 #menu {
-	border: solid black 2px;
+	border: none;
 	width:17em;
 	height: 500px;
-	background-color:darkgrey;
-	opacity:0.95;
-	margin:5px;
+	/*margin:5px;*/
 }
 #menu button{
 	width:7em;
 	height:3em;
-	color: white;
-	background-color:blue;
-	margin-left:5px;
+	color: #777;
+	background-color:#f7f2ea;
+	margin-left:40px;
 	margin-top:1px;
+}
+ul#navlist
+{
+display:none;
+text-align: left;
+list-style: none;
+padding: 0;
+margin: 0 auto;
+width: 70%;
+}
+
+ul#navlist li
+{
+display: block;
+margin: 0;
+padding: 0;
+}
+
+ul#navlist li a
+{
+display: block;
+width: 100%;
+padding: 0.5em 0 0.5em 2em;
+border-width: 1px;
+border-color: #ffe #aaab9c #ccc #fff;
+border-style: solid;
+color: #777;
+text-decoration: none;
+background: #f7f2ea;
+}
+
+#navcontainer>ul#navlist li a { width: auto; }
+
+ul#navlist li#active a
+{
+background: #f0e7d7;
+color: #800000;
+}
+
+ul#navlist li a:hover, ul#navlist li#active a:hover
+{
+color: #800000;
+background: #f0e7d7;
+border-color: #aaab9c #fff #fff #ccc;
+}
+#navlist:target{
+    display: block;
 }
 
 #can {
 	border: solid black 2px;
-	margin: 5px;
+	/*margin: 5px;*/
+	margin-right; 0;
 	background-color: white;
 	float:left;
 	display:block;
+	padding:2px;
 }
 #knappar {
-	margin: 5px;
+	/*margin: 5px;*/
+	margin-left: 0;
+	padding: 2px;
 	border:solid black 2px;
 	width:17em;
 	height: 500px;
-	background-color:darkgrey;
-	opacity:0.95;
+	background-color:#f0e7d7;
 	display: inline-block;
+	color: #777;
 }
 #statswrap {
 	background-color:white;

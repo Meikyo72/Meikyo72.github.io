@@ -20,7 +20,16 @@
 <div id="mainwrapper">
 <div id="secwrapper">
 <div id="menu">
-<button id="menubutton" type="button">Meny</button>
+<button id="menubutton" type="button" onclick="location.href='#navlist'">Meny</button>
+<ul id="navlist">
+	<li id="mencirk"><a href="#">Rita Cirkel</a></li>
+	<li id="menrekt"><a href="#">Rita Rektangel</a></li>
+	<li id="mentria"><a href="#">Rita Triangel</a></li>
+	<li id="menpoly"><a href="#">Rita Polygon</a></li>
+	<li id="menslut"><a href="#">Slutför polygon</a></li>
+	<li class="rensa" id="menrens"><a href="#">Rensa Canvas</a></li>
+	<li id="menexpo"><a href="#">Exportera JSON</a></li>
+</ul>
 </div>
 </div>
 
@@ -54,14 +63,16 @@
 <br>
 <button id="avbryt" type="button">Rita Polygon</button>
 <br>
-<button id="rensa" type="button">Rensa Canvas</button>
+<button class="rensa" id="rensa" type="button">Rensa Canvas</button>
 <br>
 <label for="statusB">Status</label>
 <div id="statswrap">
-<p id="statusB">What will you do?</p>
+<p id="statusB">Vad ska du göra?</p>
 </div>
 <br>
 <button id="exp" type="button">Exportera bild</button>
+
+<button id="imp" type="button">Importera bild</button>
 </div>
 </div>
 <footer>Petri Jahnsson - FEU16</footer>
