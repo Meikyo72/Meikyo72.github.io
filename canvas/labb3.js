@@ -8,6 +8,7 @@
 	button2.onclick=rensa;
 	var statusB=document.getElementById('statusB');
 	var jstr=document.getElementById('jotext');
+	var lista=[];
 	
 	let menubutton=document.getElementById('menubutton');
 	menubutton.addEventListener('click', show);
@@ -164,6 +165,7 @@ function drawRec(canvas, context){
 		context.fillStyle=hcol;
 		context.fillRect(mx,my,x,y);
 		c=0;
+		lista.push({"id":"rectangle","mx":mx,"my":my,"x":x,"y":y,"hcol":hcol});
 		canvas.removeEventListener('click', recFunc);
 	}
 	}	
@@ -237,6 +239,7 @@ function drawCir(canvas, context){
 		context.fillStyle=hcol;
 		context.fill();		
 		c=0;
+		lista.push({"id":"circle","x":x,"y":y,"r":r,"hcol":hcol});
 		canvas.removeEventListener('click',cirFunc);
 	}
 	}
@@ -274,7 +277,8 @@ function drawTriangle(canvas, context){
 	context.fill();
 }
 function drawTri(canvas, context){
-	
+	let myobj={};
+	myobj["id"]="triangle";
 	statusB.innerHTML='Ritar triangel Markera tre punkter ';
 	let selectObj=document.getElementById('sel');
 	let index=selectObj.selectedIndex;
@@ -296,31 +300,47 @@ function drawTri(canvas, context){
 	context.beginPath();
 	canvas.addEventListener('click', triFunc);
 	function triFunc(event){
+	
 	c=c+1;
     let rect = canvas.getBoundingClientRect();
     let x = event.clientX - rect.left;
     let y = event.clientY - rect.top;	
 	if (c==1){
-		let mx=x;
-		let my=y;
-		context.moveTo(mx,my);		
-	}else {		
+		statusB.innerHTML='Fler punkter krävs för en triangel';
+		
+		context.moveTo(x,y);
+		var mx=x;
+		var my=y;
+		myobj["x1"]=mx;
+		myobj["y1"]=my;
+	}else if (c==2) {
+		
 		context.lineTo(x,y);
 		context.stroke();
-		
-		if (c<3){
-			statusB.innerHTML='Fler punkter krävs för en triangel';
-		}else if(c==3){
+		var xs=x;
+		var ys=y;
+		myobj["x2"]=xs;
+		myobj["y2"]=ys;
+	}else {
+		var xt=x;
+		var yt=y;
+		context.lineTo(xt,yt);
+		context.stroke();
 		context.closePath();
 		context.fillStyle=hcol;
 		context.fill();
 		c=0;
-		statusB.innerHTML=' ';
-		canvas.removeEventListener('click', triFunc);
-		}		
-	}
+		x=0;
+		y=0;
+		myobj["x3"]=xt;
+		myobj["y3"]=yt;
+		myobj["hcol"]=hcol;
+		canvas.removeEventListener('click', triFunc);	
+		lista.push(myobj);
+		}			
 	}	
 }
+
 function drawPolygon(canvas, context){
 	
 	statusB.innerHTML='Ritar polygon Markera minst 5 punkter och avsluta med Rita Polygon ';
@@ -381,9 +401,9 @@ function drawPolygon(canvas, context){
 function expImg(){
 	localStorage.setItem(canvas, canvas.toDataURL());
 	statusB.innerHTML='Sparar i HTML5 Local Storage och skriver JSON-sträng';
-	let hamta=localStorage.getItem(canvas);
+	/*let hamta=localStorage.getItem(canvas);*/
 	
-	document.getElementById('jotext').value=JSON.stringify(hamta);
+	document.getElementById('jotext').value=JSON.stringify(lista);
 }
 function impImg(){
 	statusB.innerHTML='Hämtar från HTML5 Local Storage ';
@@ -406,11 +426,26 @@ let impj=document.getElementById('impj');
 impj.addEventListener('click', impJ);
 function impJ(){ 
 	let lamna=document.getElementById('jotext').value;
-	let img = new Image;
-	img.src = lamna;
-	img.onload = function(){
-		context.drawImage(img, 0, 0);
-	};
+	let vasst=JSON.parse(lamna);
+	for (let i=0; i<vasst.length;i++){
+		let m=vasst[i];
+		if (m.id=="rectangle"){
+			context.fillStyle=m.hcol;
+			context.fillRect(m.mx,m.my,m.x,m.y);
+		}else if (m.id=="circle"){
+			context.arc(m.x, m.y, m.r, 0, 2*Math.PI, true);
+			context.fillStyle=m.hcol;
+			context.fill();
+		}else if (m.id=="triangle"){
+			context.beginPath();
+			context.moveTo(m.x1, m.y1);
+			context.lineTo(m.x2, m.y2);
+			context.lineTo(m.x3, m.y3);
+			context.closePath();
+			context.fillStyle=m.hcol;
+			context.fill();
+		}
+	}
 }
 
 })();
