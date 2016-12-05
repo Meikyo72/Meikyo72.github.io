@@ -108,9 +108,12 @@ a:visited {
 	margin-left:40px;
 	margin-top:1px;
 }
+#navi{
+	display:none;
+}
 ul#navlist
 {
-display:none;
+/*display:none;*/
 text-align: left;
 list-style: none;
 padding: 0;
@@ -155,6 +158,9 @@ border-color: #aaab9c #fff #fff #ccc;
 #navlist:target{
     display: block;
 }
+.navShow{
+	display:block !important;
+}
 
 #can {
 	border: solid black 2px;
@@ -171,7 +177,7 @@ border-color: #aaab9c #fff #fff #ccc;
 	padding: 2px;
 	border:solid black 2px;
 	width:17em;
-	height: 500px;
+	height: auto;
 	background-color:#f0e7d7;
 	display: inline-block;
 	color: #777;

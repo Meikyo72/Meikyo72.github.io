@@ -7,6 +7,14 @@
 	let button2=document.getElementById("rensa");
 	button2.onclick=rensa;
 	var statusB=document.getElementById('statusB');
+	var jstr=document.getElementById('jotext');
+	
+	let menubutton=document.getElementById('menubutton');
+	menubutton.addEventListener('click', show);
+function show(){
+	let showhide=document.getElementById('navi');
+	showhide.classList.toggle('navShow');
+}
 	
 	let expbutton=document.getElementById('exp');
 	expbutton.addEventListener('click', expB);
@@ -56,6 +64,17 @@ function menExp(event){
 	expImg();
 }
 
+let adcol=document.getElementById('adcol');
+	adcol.addEventListener('click', adCol);
+function adCol(event){
+	let hcol=document.getElementById('farg').value;
+	let myopt=document.createElement('option');
+	myopt.text=hcol;
+	myopt.value=hcol;
+	let mysel=document.getElementById('sel');
+	mysel.appendChild(myopt);
+}
+
 
 
 function rita(){
@@ -83,6 +102,7 @@ if (document.getElementById('ranrectangle').checked){
 }
 
 function drawRectangle(canvas, context){
+	
 	let selectObj=document.getElementById('sel');
 	let index=selectObj.selectedIndex;
 	let color=selectObj[index].value;
@@ -92,6 +112,11 @@ function drawRectangle(canvas, context){
 		document.getElementById('farg').value='#0000FF';
 	}else if (color=='green'){
 		document.getElementById('farg').value='#008000';
+	}else if(color=='inget') {
+		let hcolo=document.getElementById('farg').value;
+		document.getElementById('farg').value=hcolo;
+	}else {
+		document.getElementById('farg').value=color;
 	}
 	let hcol=document.getElementById('farg').value;
 	let w=Math.floor(Math.random()*40);
@@ -101,6 +126,7 @@ function drawRectangle(canvas, context){
 	context.fillRect(x, y, w, w);
 }
 function drawRec(canvas, context){
+	
 	statusB.innerHTML='Ritar rektangel Markera två punkter ';
 	let selectObj=document.getElementById('sel');
 	let index=selectObj.selectedIndex;
@@ -111,6 +137,11 @@ function drawRec(canvas, context){
 		document.getElementById('farg').value='#0000FF';
 	}else if (color=='green'){
 		document.getElementById('farg').value='#008000';
+	}else if(color=='inget') {
+		let hcolo=document.getElementById('farg').value;
+		document.getElementById('farg').value=hcolo;
+	}else {
+		document.getElementById('farg').value=color;
 	}
 	let hcol=document.getElementById('farg').value;
 	let c=0;
@@ -138,6 +169,7 @@ function drawRec(canvas, context){
 	}	
 }
 function drawCircle(canvas, context){
+	
 	let selectObj=document.getElementById('sel');
 	let index=selectObj.selectedIndex;
 	let color=selectObj[index].value;
@@ -147,6 +179,11 @@ function drawCircle(canvas, context){
 		document.getElementById('farg').value='#0000FF';
 	}else if (color=='green'){
 		document.getElementById('farg').value='#008000';
+	}else if(color=='inget') {
+		let hcolo=document.getElementById('farg').value;
+		document.getElementById('farg').value=hcolo;
+	}else {
+		document.getElementById('farg').value=color;
 	}
 	let hcol=document.getElementById('farg').value;
 	let radius=Math.floor(Math.random()*40);
@@ -158,6 +195,7 @@ function drawCircle(canvas, context){
 	context.fill();
 }
 function drawCir(canvas, context){
+	
 	statusB.innerHTML='Ritar cirkel Markera två punkter ';
 	let selectObj=document.getElementById('sel');
 	let index=selectObj.selectedIndex;
@@ -168,6 +206,11 @@ function drawCir(canvas, context){
 		document.getElementById('farg').value='#0000FF';
 	}else if (color=='green'){
 		document.getElementById('farg').value='#008000';
+	}else if(color=='inget') {
+		let hcolo=document.getElementById('farg').value;
+		document.getElementById('farg').value=hcolo;
+	}else {
+		document.getElementById('farg').value=color;
 	}
 	let hcol=document.getElementById('farg').value;
 	let c=0;
@@ -199,6 +242,7 @@ function drawCir(canvas, context){
 	}
 }
 function drawTriangle(canvas, context){
+	
 	let selectObj=document.getElementById('sel');
 	let index=selectObj.selectedIndex;
 	let color=selectObj[index].value;
@@ -208,6 +252,11 @@ function drawTriangle(canvas, context){
 		document.getElementById('farg').value='#0000FF';
 	}else if (color=='green'){
 		document.getElementById('farg').value='#008000';
+	}else if(color=='inget') {
+		let hcolo=document.getElementById('farg').value;
+		document.getElementById('farg').value=hcolo;
+	}else {
+		document.getElementById('farg').value=color;
 	}
 	let hcol=document.getElementById('farg').value;
 	let w=Math.floor(Math.random()*canvas.width);
@@ -225,6 +274,7 @@ function drawTriangle(canvas, context){
 	context.fill();
 }
 function drawTri(canvas, context){
+	
 	statusB.innerHTML='Ritar triangel Markera tre punkter ';
 	let selectObj=document.getElementById('sel');
 	let index=selectObj.selectedIndex;
@@ -235,6 +285,11 @@ function drawTri(canvas, context){
 		document.getElementById('farg').value='#0000FF';
 	}else if (color=='green'){
 		document.getElementById('farg').value='#008000';
+	}else if(color=='inget') {
+		let hcolo=document.getElementById('farg').value;
+		document.getElementById('farg').value=hcolo;
+	}else {
+		document.getElementById('farg').value=color;
 	}
 	let hcol=document.getElementById('farg').value;
 	let c=0;
@@ -254,7 +309,6 @@ function drawTri(canvas, context){
 		context.stroke();
 		
 		if (c<3){
-			/*let statusB=document.getElementById('statusB');*/
 			statusB.innerHTML='Fler punkter krävs för en triangel';
 		}else if(c==3){
 		context.closePath();
@@ -268,6 +322,8 @@ function drawTri(canvas, context){
 	}	
 }
 function drawPolygon(canvas, context){
+	
+	statusB.innerHTML='Ritar polygon Markera minst 5 punkter och avsluta med Rita Polygon ';
 	let selectObj=document.getElementById('sel');
 	let index=selectObj.selectedIndex;
 	let color=selectObj[index].value;
@@ -277,6 +333,11 @@ function drawPolygon(canvas, context){
 		document.getElementById('farg').value='#0000FF';
 	}else if (color=='green'){
 		document.getElementById('farg').value='#008000';
+	}else if(color=='inget') {
+		let hcolo=document.getElementById('farg').value;
+		document.getElementById('farg').value=hcolo;
+	}else {
+		document.getElementById('farg').value=color;
 	}
 	let hcol=document.getElementById('farg').value;
 	let c=0;
@@ -294,7 +355,7 @@ function drawPolygon(canvas, context){
 	}else {		
 		context.lineTo(x,y);
 		context.stroke();
-		statusB.innerHTML='Ritar polygon Markera minst 5 punkter och avsluta med Rita Polygon ';
+		
 	let menslut=document.getElementById('menslut');
 	menslut.addEventListener('click', menSlu);
 		function menSlu(event){
@@ -319,7 +380,10 @@ function drawPolygon(canvas, context){
 }
 function expImg(){
 	localStorage.setItem(canvas, canvas.toDataURL());
-	statusB.innerHTML='Sparar i HTML5 Local Storage ';
+	statusB.innerHTML='Sparar i HTML5 Local Storage och skriver JSON-sträng';
+	let hamta=localStorage.getItem(canvas);
+	
+	document.getElementById('jotext').value=JSON.stringify(hamta);
 }
 function impImg(){
 	statusB.innerHTML='Hämtar från HTML5 Local Storage ';
@@ -335,9 +399,18 @@ function rensa(){
 	statusB.innerHTML='Rensar Canvas ';
 	let canvas=document.getElementById("can");
 	let context=canvas.getContext("2d");
-	context.clearRect(0, 0, canvas.width, canvas.height);
+	context.clearRect(0, 0, canvas.width, canvas.height);	
+}
 
-	
+let impj=document.getElementById('impj');
+impj.addEventListener('click', impJ);
+function impJ(){ 
+	let lamna=document.getElementById('jotext').value;
+	let img = new Image;
+	img.src = lamna;
+	img.onload = function(){
+		context.drawImage(img, 0, 0);
+	};
 }
 
 })();
