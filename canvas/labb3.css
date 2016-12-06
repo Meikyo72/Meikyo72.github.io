@@ -161,7 +161,9 @@ border-color: #aaab9c #fff #fff #ccc;
 .navShow{
 	display:block !important;
 }
-
+#jimp{
+	margin-top:-120px;
+}
 #can {
 	border: solid black 2px;
 	/*margin: 5px;*/
