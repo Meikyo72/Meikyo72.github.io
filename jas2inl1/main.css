@@ -1,0 +1,83 @@
+body{
+    background-image: url("bgrimg copy.jpg");
+}
+main {
+    background-color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+section {
+    background-color: darkgrey;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.jumbotron {
+    text-align: center;
+    font-size: 20px;
+    font-family: cursive;
+}
+button {
+    margin: 5px;
+}
+#theKey {
+    height: 150px;
+    background-color: white;
+     
+    
+}
+.blackBg {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+#addBooks{
+    height: 250px;
+    background-color: white;
+    border-top: solid grey;
+}
+#firstBox {
+    
+    background-image: url('Bookends.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+#fourthBox {
+    background-color: white;
+    background-image: url('openbook.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+}
+#allBooks {
+    background-color: white;
+    border: none;
+}
+#theMessage {
+    background-color: white;
+    text-align: center;
+}
+#bookview {
+    background-color: white;
+}
+#bview {
+    height: inherit;
+    font-weight: bold;
+    overflow: auto;
+}
+#getBooksButton {
+    margin-top: 50px;
+}
+#fifthBox {
+    background-color: white;
+    border-top: solid grey;
+    height: auto;
+}
+#gooBooks {
+    margin-top: 5px;
+}
