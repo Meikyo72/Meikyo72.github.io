@@ -14,6 +14,7 @@ window.onload = function () {
 					namn: addName.value,
 					med: addText.value
 				});
+            localStorage.petriBaseN = addName.value;
             }
 			});
     firebase.database().ref('mess/').on('child_added', function(snapshot, prevChildKey) {
@@ -25,7 +26,7 @@ window.onload = function () {
 				tr.innerHTML = `<td>${data.tid}</td> <td>${data.id}</td> <td>${data.namn}</td> <td>${data.med}</td>`;
 				tableBody.appendChild(tr);
 			}
-    localStorage.petriBaseN = addName.value;
+    
     glMig.addEventListener('click', function(event){
         localStorage.removeItem("petriBaseN");
     });
