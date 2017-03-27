@@ -9,7 +9,7 @@ window.onload = function () {
         if (event.keyCode==13){
             let datum = new Date();
 				firebase.database().ref('mess/').push({
-					tid: datum,
+					tid: datum.toString(),
 					id: datum.getTime(),
 					namn: addName.value,
 					med: addText.value
