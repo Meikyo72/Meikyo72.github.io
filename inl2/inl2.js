@@ -32,10 +32,7 @@ window.onload = function () {
 				tr.innerHTML = `<td>${data.tid}</td> <td>${data.id}</td> <td>${data.namn}</td> <td>${data.med}</td>`;
 				tableBody.appendChild(tr);
                 addText.value='';
-                let bottomScrolled = scrollRow.scrollHeight-scrollRow.clientHeight <=scrollRow.scrollTop + 1;
-                    if(bottomScrolled){
-                        scrollRow.scrollTop = scrollRow.scrollHeight-scrollRow.clientHeight;
-                    }
+                scrollRow.scrollTop = scrollRow.scrollHeight;
 			}
     
     glMig.addEventListener('click', function(event){
