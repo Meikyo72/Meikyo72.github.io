@@ -4,7 +4,7 @@ window.onload = function () {
     let tableBody = document.getElementById('tableBody');
     let addText = document.getElementById('addText');
     
-    if (addName.value===undefined){
+    if (addName.value=='undefined'){
         addName.value='';
     }else{
         addName.value = localStorage.petriBaseN;
