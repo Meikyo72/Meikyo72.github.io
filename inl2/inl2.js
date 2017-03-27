@@ -9,7 +9,7 @@ window.onload = function () {
     }else{
     addName.value = localStorage.petriBaseN;
     }
-    console.log('Namnet är:'+addName.value);
+    
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
             let datum = new Date();
