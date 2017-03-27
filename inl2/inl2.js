@@ -4,9 +4,9 @@ window.onload = function () {
     let tableBody = document.getElementById('tableBody');
     let addText = document.getElementById('addText');
     addName.value = localStorage.petriBaseN;
-    if (addName.value==undefined){
+    if (addName.value===undefined){
         addName.value='';
-    }
+    };
     
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
