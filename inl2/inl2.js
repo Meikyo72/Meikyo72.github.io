@@ -4,11 +4,11 @@ window.onload = function () {
     let tableBody = document.getElementById('tableBody');
     let addText = document.getElementById('addText');
     
-    if (addName.value=='undefined'){
-        addName.value='';
-    }else{
-        addName.value = localStorage.petriBaseN;
-    }
+    
+    addName.value='';
+    
+    addName.value = localStorage.petriBaseN;
+    
     console.log('Namnet är:'+addName.value);
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
