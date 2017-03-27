@@ -5,8 +5,6 @@ window.onload = function () {
     let addText = document.getElementById('addText');
     
     
-    addName.value='';
-    
     addName.value = localStorage.petriBaseN;
     
     console.log('Namnet är:'+addName.value);
