@@ -3,6 +3,7 @@ window.onload = function () {
     let glMig = document.getElementById('glMig');
     let tableBody = document.getElementById('tableBody');
     let addText = document.getElementById('addText');
+    let scrollRow = document.getElementById('scrollRow');
     
     if (localStorage.petriBaseN==undefined){
         addName.value='';
@@ -31,6 +32,10 @@ window.onload = function () {
 				tr.innerHTML = `<td>${data.tid}</td> <td>${data.id}</td> <td>${data.namn}</td> <td>${data.med}</td>`;
 				tableBody.appendChild(tr);
                 addText.value='';
+                let bottomScrolled = scrollRow.scrollHeight-scrollRow.clientHeight <=scrollRow.scrollTop + 1;
+                    if(bottomScrolled){
+                        scrollRow.scrollTop = scrollRow.scrollHeight-scrollRow.clientHeight;
+                    }
 			}
     
     glMig.addEventListener('click', function(event){
