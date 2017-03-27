@@ -3,10 +3,12 @@ window.onload = function () {
     let glMig = document.getElementById('glMig');
     let tableBody = document.getElementById('tableBody');
     let addText = document.getElementById('addText');
-    addName.value = localStorage.petriBaseN;
+    
     if (addName.value===undefined){
         addName.value='';
-    };
+    }else{
+        addName.value = localStorage.petriBaseN;
+    }
     console.log('Namnet är:'+addName.value);
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
