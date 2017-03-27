@@ -3,7 +3,7 @@ window.onload = function () {
     let glMig = document.getElementById('glMig');
     let tableBody = document.getElementById('tableBody');
     let addText = document.getElementById('addText');
-    addName.innerHTML = localStorage.petriBaseN;
+    addName.value = localStorage.petriBaseN;
     
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
