@@ -7,7 +7,7 @@ window.onload = function () {
     if (addName.value===undefined){
         addName.value='';
     };
-    
+    console.log('Namnet är:'addName);
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
             let datum = new Date();
