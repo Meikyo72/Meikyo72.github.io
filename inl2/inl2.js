@@ -22,7 +22,7 @@ window.onload = function () {
 			});
     function addMessToTable(data) {
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.tid}</td> <td>${data.id}</td> <td>${data.namn}</td> <td>${data.med}></td>`;
+				tr.innerHTML = `<td>${data.tid}</td> <td>${data.id}</td> <td>${data.namn}</td> <td>${data.med}</td>`;
 				tableBody.appendChild(tr);
 			}
 }
