@@ -16,6 +16,7 @@ window.onload = function () {
   var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
+        console.log('inloggad');
         window.location.reload();
         
       }).catch(function(error) {
@@ -66,6 +67,7 @@ window.onload = function () {
         loggaUt.addEventListener('click', function(event){
         firebase.auth().signOut().then(function() {
         // Sign-out successful.
+            console.log('utloggad');
             window.location.reload();
         }).catch(function(error) {
         // An error happened.
