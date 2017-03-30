@@ -17,6 +17,7 @@ window.onload = function () {
   // The signed-in user info.
   var user = result.user;
         console.log('inloggad');
+        console.log(user.displayName);
         window.location.reload();
         
       }).catch(function(error) {
@@ -35,7 +36,6 @@ window.onload = function () {
     }else{
     addName.value = localStorage.petriBaseN;
     }
-    console.log(user.displayName);
     
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
