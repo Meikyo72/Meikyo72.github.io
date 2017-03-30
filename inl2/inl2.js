@@ -19,7 +19,7 @@ window.onload = function () {
         console.log('inloggad');
         console.log(user.displayName);
         //window.location.reload();
-        
+        theUser.innerHTML = 'Inloggad som:'+user.displayName;
       }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -36,8 +36,7 @@ window.onload = function () {
     }else{
     addName.value = localStorage.petriBaseN;
     }
-    var myUser = result.user;
-    theUser.innerHTML = 'Inloggad som:'+myUser.displayName;
+    
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
             let datum = new Date();
