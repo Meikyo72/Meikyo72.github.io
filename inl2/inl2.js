@@ -18,7 +18,7 @@ window.onload = function () {
   var user = result.user;
         console.log('inloggad');
         console.log(user.displayName);
-        window.location.reload();
+        //window.location.reload();
         
       }).catch(function(error) {
   // Handle Errors here.
