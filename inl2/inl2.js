@@ -5,6 +5,7 @@ window.onload = function () {
     let addText = document.getElementById('addText');
     let scrollRow = document.getElementById('scrollRow');
     let hideUser = document.getElementById('logout');
+    let loggaUt = document.getElementById('loggaUt');
     var provider = new firebase.auth.GithubAuthProvider();
     
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -56,7 +57,9 @@ window.onload = function () {
     
     glMig.addEventListener('click', function(event){
         localStorage.removeItem("petriBaseN");
-        addName.value='';
+        addName.value='';        
+    });
+        loggaUt.addEventListener('click', function(event){
         firebase.auth().signOut().then(function() {
         // Sign-out successful.
             window.location.reload();
@@ -65,6 +68,5 @@ window.onload = function () {
         });
         
     });
-        
   
 }
