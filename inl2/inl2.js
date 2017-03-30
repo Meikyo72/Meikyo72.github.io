@@ -4,6 +4,7 @@ window.onload = function () {
     let tableBody = document.getElementById('tableBody');
     let addText = document.getElementById('addText');
     let scrollRow = document.getElementById('scrollRow');
+    let hideUser = document.getElementById('logout');
     var provider = new firebase.auth.GithubAuthProvider();
     
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -58,9 +59,11 @@ window.onload = function () {
         addName.value='';
         firebase.auth().signOut().then(function() {
         // Sign-out successful.
+            window.location.reload();
         }).catch(function(error) {
         // An error happened.
         });
+        
     });
         
   
