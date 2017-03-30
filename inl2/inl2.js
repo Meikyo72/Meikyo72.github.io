@@ -56,6 +56,11 @@ window.onload = function () {
     glMig.addEventListener('click', function(event){
         localStorage.removeItem("petriBaseN");
         addName.value='';
+        firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        }).catch(function(error) {
+        // An error happened.
+        });
     });
         
   
