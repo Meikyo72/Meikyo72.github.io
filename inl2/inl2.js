@@ -20,7 +20,7 @@ window.onload = function () {
   var user = result.user;
         console.log('inloggad');
         console.log(user.displayName);
-        theUser.innerHTML = 'Inloggad som:'+user.displayName;
+        theUser.innerHTML = 'Inloggad som: '+user.displayName+' '+user.photoURL;
          if (localStorage.petriBaseN==undefined){
         addName.value='';
     }else{
