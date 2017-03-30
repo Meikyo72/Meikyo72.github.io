@@ -6,8 +6,10 @@ window.onload = function () {
     let scrollRow = document.getElementById('scrollRow');
     let hideUser = document.getElementById('logout');
     let loggaUt = document.getElementById('loggaUt');
+    let loggaIn = document.getElementById('loggaIn');
     var provider = new firebase.auth.GithubAuthProvider();
     
+    loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
   // This gives you a GitHub Access Token. You can use it to access the GitHub API.
   var token = result.credential.accessToken;
@@ -24,6 +26,7 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
+    });
     
     if (localStorage.petriBaseN==undefined){
         addName.value='';
