@@ -17,7 +17,6 @@ window.onload = function () {
   // The signed-in user info.
   var user = result.user;
         console.log('inloggad');
-        window.location.reload();
         
       }).catch(function(error) {
   // Handle Errors here.
@@ -68,7 +67,6 @@ window.onload = function () {
         firebase.auth().signOut().then(function() {
         // Sign-out successful.
             console.log('utloggad');
-            window.location.reload();
         }).catch(function(error) {
         // An error happened.
         });
