@@ -20,6 +20,7 @@ window.onload = function () {
         console.log(user.displayName);
         //window.location.reload();
         theUser.innerHTML = 'Inloggad som:'+user.displayName;
+        addMessToTable(data);
       }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
