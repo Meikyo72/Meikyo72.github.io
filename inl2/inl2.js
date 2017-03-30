@@ -17,7 +17,7 @@ window.onload = function () {
   // The signed-in user info.
   var user = result.user;
         window.location.reload();
-        theUser.innerHTML= user;
+        theUser.innerHTML= user.displayName;
       }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
