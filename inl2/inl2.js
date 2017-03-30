@@ -10,6 +10,8 @@ window.onload = function () {
     let theUser = document.getElementById('theUser');
     var provider = new firebase.auth.GithubAuthProvider();
     
+    theUser.innerHTML = 'Du är utloggad';
+    
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
   // This gives you a GitHub Access Token. You can use it to access the GitHub API.
@@ -18,7 +20,6 @@ window.onload = function () {
   var user = result.user;
         console.log('inloggad');
         console.log(user.displayName);
-        //window.location.reload();
         theUser.innerHTML = 'Inloggad som:'+user.displayName;
          if (localStorage.petriBaseN==undefined){
         addName.value='';
@@ -70,7 +71,7 @@ window.onload = function () {
         firebase.auth().signOut().then(function() {
         // Sign-out successful.
             console.log('utloggad');
-            theUser.innerHTML = 'Du är utloggad';
+            window.location.reload();
         }).catch(function(error) {
         // An error happened.
         });
