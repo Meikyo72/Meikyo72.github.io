@@ -33,7 +33,8 @@ window.onload = function () {
     if (localStorage.petriBaseN==undefined){
         addName.value='';
     }else{
-    addName.value = localStorage.petriBaseN;
+    //addName.value = localStorage.petriBaseN;
+    addName.value = user.displayName;
     }
     
     addText.addEventListener('keypress', function(event) {
