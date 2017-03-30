@@ -20,19 +20,7 @@ window.onload = function () {
         console.log(user.displayName);
         //window.location.reload();
         theUser.innerHTML = 'Inloggad som:'+user.displayName;
-        addMessToTable(data);
-      }).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-    });
-    if (localStorage.petriBaseN==undefined){
+         if (localStorage.petriBaseN==undefined){
         addName.value='';
     }else{
     addName.value = localStorage.petriBaseN;
@@ -61,6 +49,18 @@ window.onload = function () {
                 addText.value='';
                 scrollRow.scrollTop = scrollRow.scrollHeight;
 			}
+      }).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
+    });
+   
     
     glMig.addEventListener('click', function(event){
         localStorage.removeItem("petriBaseN");
