@@ -69,6 +69,7 @@ window.onload = function () {
         firebase.auth().signOut().then(function() {
         // Sign-out successful.
             console.log('utloggad');
+            theUser.innerHTML = 'Du är utloggad';
         }).catch(function(error) {
         // An error happened.
         });
