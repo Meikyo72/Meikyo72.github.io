@@ -36,7 +36,8 @@ window.onload = function () {
     }else{
     addName.value = localStorage.petriBaseN;
     }
-    
+    var myUser = result.user;
+    theUser.innerHTML = 'Inloggad som:'+myUser.displayName;
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
             let datum = new Date();
