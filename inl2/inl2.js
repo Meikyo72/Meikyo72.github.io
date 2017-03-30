@@ -17,6 +17,7 @@ window.onload = function () {
   // The signed-in user info.
   var user = result.user;
         console.log('inloggad');
+        window.location.reload();
         if (localStorage.petriBaseN==undefined){
         addName.value='';
     }else{
