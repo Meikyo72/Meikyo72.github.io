@@ -29,7 +29,7 @@ window.onload = function () {
   // ...
 });
     });
-    
+    console.log(user);
     if (localStorage.petriBaseN==undefined){
         addName.value='';
     }else{
