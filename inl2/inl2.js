@@ -7,6 +7,7 @@ window.onload = function () {
     let hideUser = document.getElementById('logout');
     let loggaUt = document.getElementById('loggaUt');
     let loggaIn = document.getElementById('loggaIn');
+    let theUser = document.getElementById('theUser');
     var provider = new firebase.auth.GithubAuthProvider();
     
     loggaIn.addEventListener('click', function(event){
@@ -15,8 +16,8 @@ window.onload = function () {
   var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
-  // ...
         window.location.reload();
+        theUser.innerHTML= user;
       }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
