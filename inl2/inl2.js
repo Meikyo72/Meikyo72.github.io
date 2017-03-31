@@ -28,7 +28,9 @@ window.onload = function () {
         console.log('inloggad');
         console.log(user.displayName);
         theUser.innerHTML = 'Inloggad som: '+user.displayName+' <img src="'+user.photoURL+'" height="42" width="42">';
-         
+        if (user.displayName=='Petri Jahnsson'){
+       petriKnapp.disabled=false;
+   }; 
     
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
@@ -65,9 +67,7 @@ window.onload = function () {
 });
     });
     
-   if (user.displayName=='Petri Jahnsson'){
-       petriKnapp.disabled=false;
-   };
+   
     
     glMig.addEventListener('click', function(event){
         localStorage.removeItem("petriBaseN");
