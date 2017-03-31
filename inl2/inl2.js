@@ -11,6 +11,11 @@ window.onload = function () {
     var provider = new firebase.auth.GithubAuthProvider();
     
     theUser.innerHTML = 'Du är utloggad';
+    if (localStorage.petriBaseN==undefined){
+        addName.value='';
+    }else{
+    addName.value = localStorage.petriBaseN;
+    }
     
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -21,11 +26,7 @@ window.onload = function () {
         console.log('inloggad');
         console.log(user.displayName);
         theUser.innerHTML = 'Inloggad som: '+user.displayName+' <img src="'+user.photoURL+'" height="42" width="42">';
-         if (localStorage.petriBaseN==undefined){
-        addName.value='';
-    }else{
-    addName.value = localStorage.petriBaseN;
-    }
+         
     
     addText.addEventListener('keypress', function(event) {
         if (event.keyCode==13){
