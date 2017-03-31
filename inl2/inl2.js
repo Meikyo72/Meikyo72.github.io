@@ -8,6 +8,7 @@ window.onload = function () {
     let loggaUt = document.getElementById('loggaUt');
     let loggaIn = document.getElementById('loggaIn');
     let theUser = document.getElementById('theUser');
+    let petriKnapp = document.getElementById('petriKnapp');
     var provider = new firebase.auth.GithubAuthProvider();
     
     theUser.innerHTML = 'Du är utloggad';
@@ -16,6 +17,7 @@ window.onload = function () {
     }else{
     addName.value = localStorage.petriBaseN;
     }
+    petriKnapp.disabled=true;
     
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -62,7 +64,10 @@ window.onload = function () {
   // ...
 });
     });
-   
+    
+   if (user.displayName=='Petri Jahnsson'){
+       petriKnapp.disabled=false;
+   };
     
     glMig.addEventListener('click', function(event){
         localStorage.removeItem("petriBaseN");
