@@ -43,7 +43,6 @@ window.onload = function () {
                 addRank.value='';
                 addStatus.value='';
                 addSpecies.value='';
-                scrollRow.scrollTop = scrollRow.scrollHeight;
 			}
       }).catch(function(error) {
   // Handle Errors here.
