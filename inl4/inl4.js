@@ -10,6 +10,7 @@ window.onload = function () {
     let addStatus = document.getElementById('addStatus');
     let addSpecies = document.getElementById('addSpecies');
     let tableBody = document.getElementById('tableBody');
+    let scrollRow = document.getElementById('scrollRow');
     
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
