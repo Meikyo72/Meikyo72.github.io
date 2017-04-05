@@ -59,7 +59,7 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
-        function sortFunc(button, sortKey) {
+        function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
 					tableBody.innerHTML = '';
 					firebase.database().ref('crew/').orderByChild(sortKey)
