@@ -40,15 +40,7 @@ window.onload = function () {
 				let data = snapshot.val();
 				addMessToTable(data);
 			});
-    function addMessToTable(data) {
-				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.name}</td> <td>${data.rank}</td> <td>${data.status}</td> <td>${data.species}</td>`;
-				tableBody.appendChild(tr);
-                addName.value='';
-                addRank.value='';
-                addStatus.value='';
-                addSpecies.value='';
-			}
+    
       }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -59,6 +51,15 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
+        function addMessToTable(data) {
+				let tr = document.createElement('tr');
+				tr.innerHTML = `<td>${data.name}</td> <td>${data.rank}</td> <td>${data.status}</td> <td>${data.species}</td>`;
+				tableBody.appendChild(tr);
+                addName.value='';
+                addRank.value='';
+                addStatus.value='';
+                addSpecies.value='';
+			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
 					tableBody.innerHTML = '';
