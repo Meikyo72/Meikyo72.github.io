@@ -11,6 +11,11 @@ window.onload = function () {
     let addSpecies = document.getElementById('addSpecies');
     let tableBody = document.getElementById('tableBody');
     let scrollRow = document.getElementById('scrollRow');
+    let sortbutt = document.getElementsByClassName('sortbutt');
+    let btnSortName = document.getElementById('btnSortName');
+    let btnSortRank = document.getElementById('btnSortRank');
+    let btnSortStatus = document.getElementById('btnSortStatus');
+    let btnSortSpecies = document.getElementById('btnSortSpecies');
     
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -54,6 +59,39 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
+        function sortFunc(button, sortKey) {
+				sortbutt.addEventListener('click', function(event) {
+					tableBody.innerHTML = '';
+					firebase.database().ref('crew/').orderByChild(sortKey)
+					.once('value', function(snapshot) {
+						snapshot.forEach( crewRef => {
+							addMessToTable(crewRef.val());
+						})
+					});
+				})
+			}
+			sortFunc(btnSortName, 'name');
+			sortFunc(btnSortRank, 'rank');
+			sortFunc(btnSortStatus, 'status');
+			sortFunc(btnSortSpecies, 'species');
+			
+			/*inputAntalResultat.addEventListener('keypress', function(event) {
+				if( event.keyCode == 13 ) {
+					let antal = Number(inputAntalResultat.value);
+					tableVisaDjur.innerHTML = '';
+					console.log('inputAntalResultat: antal=' + antal);
+					if( isNaN(antal) ) {
+						// varna användaren
+					} else {
+						firebase.database().ref('djur/').limitToFirst(antal)
+						.once('value', function(snapshot) {
+								snapshot.forEach( animalRef => {
+									addAnimalToTable(animalRef.val());
+								})
+						});
+					}
+				}
+			});*/
     });
     
    
