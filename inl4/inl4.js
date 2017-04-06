@@ -3,7 +3,7 @@ window.onload = function () {
     let loggaIn = document.getElementById('loggaIn');
     let theUser = document.getElementById('theUser');
     var provider = new firebase.auth.GithubAuthProvider();
-    let search = document.getElementById('search');
+    let hits = document.getElementById('hits');
     let subb = document.getElementById('subb');
     let addName = document.getElementById('addName');
     let addRank = document.getElementById('addRank');
@@ -76,23 +76,22 @@ window.onload = function () {
 			sortFunc(btnSortStatus, 'status');
 			sortFunc(btnSortSpecies, 'species');
 			
-			/*inputAntalResultat.addEventListener('keypress', function(event) {
+			hits.addEventListener('keypress', function(event) {
 				if( event.keyCode == 13 ) {
-					let antal = Number(inputAntalResultat.value);
-					tableVisaDjur.innerHTML = '';
-					console.log('inputAntalResultat: antal=' + antal);
+					let antal = Number(hits.value);
+					tableBody.innerHTML = '';
 					if( isNaN(antal) ) {
-						// varna användaren
+						hits.value = 'Input a number';
 					} else {
-						firebase.database().ref('djur/').limitToFirst(antal)
+						firebase.database().ref('crew/').limitToFirst(antal)
 						.once('value', function(snapshot) {
-								snapshot.forEach( animalRef => {
-									addAnimalToTable(animalRef.val());
+								snapshot.forEach( crewRef => {
+									addMessToTable(crewRef.val());
 								})
 						});
 					}
 				}
-			});*/
+			});
     });
     
    
