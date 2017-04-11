@@ -34,9 +34,9 @@
         constructor(props) {
             super(props);
             this.state = {
-                num1: Number ,
-                num2: Number ,
-                result: Number 
+                num1: null ,
+                num2: null ,
+                result: null 
             };
             this.theKeyUp = this.theKeyUp.bind(this);
             this.theKeyUp2 = this.theKeyUp2.bind(this);
@@ -54,7 +54,7 @@
         }
         handleClick(event) {
             this.setState({
-                result: parseInt(this.state.num1)+parseInt(this.state.num2)
+                result: Number(this.state.num1)+parseInt(this.state.num2)
             })
         }
         render() {
