@@ -27,10 +27,18 @@ class App extends React.Component {
    
    
     rowClick (event){
-        let selectedH = event.target;
+        let inp = document.getElementsByClassName("inputname");
+        let selectedH = event.target;      
+        let someH = selectedH.id;
+            someH = someH - 1;
+        let oList = this.state.list;
+        for ( let i = 0; i < oList.length; i++){
+            if (someH == i){
+                inp[0].value = oList[i].firstName;
+                inp[1].value = oList[i].lastName;
+            }
+        }
         
-        let someH = selectedH.innerHTML;        
-        console.log({someH});
     }
     
     addNewHero(event){             
@@ -66,9 +74,10 @@ class App extends React.Component {
 class MyList extends React.Component {
     render () {
         let thlist = cols;
+        let k = 0;
         let key = 0;
-        let newHead = thlist.map (x=>  <th key={key++}>{x.label}</th>);       
-        const newBody = this.props.list.map (y=> <tr className="row" key={key++} onClick={this.props.rowClick}><td>{y.firstName}</td><td>{y.lastName}</td></tr>);
+        let newHead = thlist.map (x=>  <th key={k++}>{x.label}</th>);       
+        const newBody = this.props.list.map (y=> <tr className="row" key={key++} onClick={this.props.rowClick}><td id={key}>{y.firstName}</td><td id={key}>{y.lastName}</td></tr>);
             return (
                 <table id="tab">
                     <thead><tr>{newHead}</tr></thead>
