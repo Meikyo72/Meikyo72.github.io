@@ -16,6 +16,9 @@ window.onload = function () {
     let btnSortRank = document.getElementById('btnSortRank');
     let btnSortStatus = document.getElementById('btnSortStatus');
     let btnSortSpecies = document.getElementById('btnSortSpecies');
+    let nHits = document.getElementsByName('nHits');
+    let first = document.getElementById('first');
+    let last = document.getElementById('last');
     
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -82,14 +85,21 @@ window.onload = function () {
 					tableBody.innerHTML = '';
 					if( isNaN(antal) ) {
 						hits.value = 'Input a number';
-					} else {
+					} else  if(first.checked == true){
 						firebase.database().ref('crew/').limitToFirst(antal)
 						.once('value', function(snapshot) {
 								snapshot.forEach( crewRef => {
 									addMessToTable(crewRef.val());
 								})
 						});
-					}
+					} else {
+                        firebase.database().ref('crew/').limitToLast(antal)
+						.once('value', function(snapshot) {
+								snapshot.forEach( crewRef => {
+									addMessToTable(crewRef.val());
+								})
+						});
+                    }
 				}
 			});
     });
