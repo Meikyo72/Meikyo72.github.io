@@ -19,33 +19,37 @@ class App extends React.Component {
                 list: heroes,
                 firstName: '',
                 lastName: '',
-                hero1:''
+                
             };
             this.addNewHero = this.addNewHero.bind(this);
             this.rowClick = this.rowClick.bind(this);
+            this.handleChange = this.handleChange.bind(this);
+            this.handleChange2 = this.handleChange2.bind(this);
         }
    
-   
+   handleChange (event){ 
+            this.setState({firstName: event.target.value});           
+   }
+    handleChange2 (event){ 
+            this.setState({lastName: event.target.value});           
+   }
     rowClick (event){
-        let inp = document.getElementsByClassName("inputname");
         let selectedH = event.target;      
         let someH = selectedH.id;
             someH = someH - 1;
         let oList = this.state.list;
         for ( let i = 0; i < oList.length; i++){
             if (someH == i){
-                inp[0].value = oList[i].firstName;
-                inp[1].value = oList[i].lastName;
+                this.setState({firstName: oList[i].firstName});
+                this.setState({lastName: oList[i].lastName});
             }
         }
         
     }
     
     addNewHero(event){             
-        let inp = document.getElementsByClassName("inputname");
         let oldList = this.state.list;
-        let newHero = [{firstName:inp[0].value,lastName:inp[1].value}];
-        
+        let newHero = {firstName: this.state.firstName, lastName: this.state.lastName};
         
         if(event.target.textContent == "Add Hero"){
         
@@ -53,8 +57,6 @@ class App extends React.Component {
                 list:oldList.concat(newHero),
                 firstName:"", lastName:"",
             });
-            inp[0].value="";
-            inp[1].value="";          
         }
         
     }
@@ -63,7 +65,7 @@ class App extends React.Component {
             return ( 
             <div>
                 <MyList list={this.state.list} rowClick={this.rowClick}/>
-                <AddForm addHero={this.addNewHero} firstName={this.firstName} lastName={this.lastName} />           
+                <AddForm addHero={this.addNewHero} firstName={this.state.firstName} lastName={this.state.lastName} handleChange={this.handleChange} handleChange2={this.handleChange2} />         
             </div>
             );
         }
@@ -92,8 +94,8 @@ class AddForm extends React.Component {
         return (
             <div>
                 <form id="inputForm">
-                    <input type="text" className="inputname" id="hero1" placeholder="Firstname" name="firstName" value={this.props.firstName} />
-                    <input type="text" className="inputname" placeholder="Lastname" name="lastName" value={this.props.lastName} />
+                    <input type="text" className="inputname" placeholder="Firstname" name="firstName" value={this.props.firstName} onChange={this.props.handleChange}/>
+                    <input type="text" className="inputname" placeholder="Lastname" name="lastName" value={this.props.lastName} onChange={this.props.handleChange2}/>
                     <button id="addButt" type="button" onClick={this.props.addHero}>Add Hero</button>
                 </form>
             </div>
