@@ -9,8 +9,8 @@ test('Form renders without crashing shallow', () => {
     shallow(<Form />);
 });
 
-test('Form has input elements', () => {
+/*test('Form has input elements', () => {
    expect (shallow(<Form />).find("input").length).toBe(2); 
-});
+});*/
     
 });

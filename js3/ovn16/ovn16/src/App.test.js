@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Button from './Button.js';
 import Form from './Form.js';
 
@@ -14,7 +14,7 @@ test('renders without crashing', () => {
     
 test('Button clears name state', () => {
    //const butt = (<Button />);
-   const app = shallow(<App />);
+   const app = mount(<App />);
     app.find('input [name="name"]').simulate('change', {target:{name:'name', value:'Petri'}});
     app.find("button").simulate('click');
     expect(app.state('name')).toBe('');
@@ -23,7 +23,7 @@ test('Button clears name state', () => {
     
 test('Button clears email state', () => {
    //const butt = (<Button />);
-   const app = shallow(<App />);
+   const app = mount(<App />);
     app.find('input [name="email"]').simulate('change', {target:{name:'email', value:'Petri@some.com'}});
     app.find("button").simulate('click');
     expect(app.state('email')).toBe('');
@@ -31,15 +31,15 @@ test('Button clears email state', () => {
 });
     
 test('name input sets state', () => {
-    const app = shallow(<App />);
+    const app = mount(<App />);
     app.find('input [name="name"]').simulate('change', {target:{name:'name', value:'Petri'}});
     expect(app.state('name')).toBe('Petri');
 });
     
 test('email input sets state', () => {
-    const app = shallow(<App />);
+    const app = mount(<App />);
     app.find('input [name="email"]').simulate('change', {target:{name:'email', value:'Petri@some.com'}});
-    expect(app.state('name')).toBe('Petri@some.com');
+    expect(app.state('email')).toBe('Petri@some.com');
 });
     
 });
