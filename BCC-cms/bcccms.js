@@ -79,8 +79,8 @@ window.onload = function () {
 				firebase.database().ref('bcc/').push({
 					description: addDescription.value,
 					price: addPrice.value,
-					sell: addSell.value,
-					rent: addRent.value
+					sell: addSell,
+					rent: addRent
 				});
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
