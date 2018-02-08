@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bcccms.css" type="text/css" />
+    <script src="bcccms.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyAVzSIkqK7xfhxGgskRpxl3SPjzmyNg1l4",
+        authDomain: "petrichat-f6d40.firebaseapp.com",
+        databaseURL: "https://petrichat-f6d40.firebaseio.com",
+        storageBucket: "petrichat-f6d40.appspot.com",
+        messagingSenderId: "156551107044"
+        };
+        firebase.initializeApp(config);
+    </script>
+    </head>
+    <body>
+      <main class='container'>
+        <div class="row">
+          <section class="col-xs-10 col-sm-10 col-md-10 col-lg-10 " id="headSection">
+            <h1>NIELSEN Estate CMS</h1>
+          </section>
+          <section class="col-xs-2 col-sm-2 col-md-2 col-lg-2 " id="row2">
+            <div class="form-group">
+              <div id="theUser"></div>
+              <button type="button" class="btn btn-info btn-sm" id="loggaIn">Log in</button>
+              <button type="button" class="btn btn-info btn-sm" id="loggaUt">Log out</button>
+            </div>
+          </section>
+        </div>
+        <div class="row">
+          <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " id="enterLog1">
+            <div class="form-group">
+              <input type="text" class="form-control" id="addInternalID" placeholder="Internt Referensnummer">
+              <input type="text" class="form-control" id="addAdress" placeholder="Objektets Adress">
+              <input type="text" class="form-control" id="addOwner" placeholder="Namn på Ägare">
+              <input type="text" class="form-control" id="addOwnerAdress" placeholder="Adress till Ägare">
+              <input type="email" class="form-control" id="addEmail" placeholder="E-post till Ägare">
+              <input type="tel" class="form-control" id="addTelephone" placeholder="Telefonnummer till Ägare"></br>
+
+              <input type="text" class="form-control" id="addIDnr" placeholder="Referensnummer">
+              <input type="url" class="form-control" id="addPic" placeholder="Bildlänk">
+              <input type="text" class="form-control" id="addDescription" placeholder="Beskrivning">
+              <input type="text" class="form-control" id="addZip" placeholder="Postnummer">
+              <input type="text" class="form-control" id="addCity" placeholder="Stad/Ort">
+              <input type="text" class="form-control" id="addZone" placeholder="Zon"></br>
+              <input type="number" id="addPrice" value="0">&nbsp Pris i €</br>
+              <input type="number" id="addRooms" value="0">&nbsp Rum</br>
+              <input type="number" id="addKitchen" value="0">&nbsp Kök</br>
+              <input type="number" id="addBedroom" value="0">&nbsp Sovrum</br>
+              <input type="number" id="addWC" value="0">&nbsp WC/Bad</br>
+              <input type="number" id="addSize" value="0">&nbsp Boendestorlek i m&sup2;</br>
+              <input type="number" id="addPropertySize" value="0">&nbsp Tomtstorlek i m&sup2;</br>
+              <button type="button" class="btn btn-info btn-sm" id="submit">Lägg till</button>
+            </div>
+          </section>
+          <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " id="enterLog2">
+            <div class="form-group">
+              <input type="number" id="addBeach" value="0">&nbsp Avstånd till Playa</br>
+              <input type="number" id="addMarina" value="0">&nbsp Avstånd till Marina</br>
+              <input type="number" id="addTransportation" value="0">&nbsp Avstånd till Pub.Transporter</br>
+              <input type="number" id="addShopping" value="0">&nbsp Avstånd till Shopping</br>
+              <input type="number" id="addMedic" value="0">&nbsp Avstånd till Apotek/Läkare</br>
+              <input type="number" id="addGolf" value="0">&nbsp Avstånd till Golf</br>
+              <input type="number" id="addTennis" value="0">&nbsp Avstånd till Tennis</br>
+              <input type="number" id="addParks" value="0">&nbsp Avstånd till Parker/Naturområde</br>
+              <input type="number" id="addTraining" value="0">&nbsp Avstånd till Träningsmöjligheter</br>
+              <input type="number" id="addSchool" value="0">&nbsp Avstånd till Skolor</br></br>
+
+              <input type="checkbox" id="addSell" value="Säljes">&nbsp Till Salu</br>
+              <input type="checkbox" id="addRent" value="Uthyres">&nbsp Uthyres</br></br>
+              <input type="checkbox" id="addFlat" value="Lägenhet">&nbsp Lägenhet</br>
+              <input type="checkbox" id="addHouse" value="Hus">&nbsp Hus/Villa</br>
+              <input type="checkbox" id="addLocale" value="Lokal">&nbsp Lokal</br>
+              <input type="checkbox" id="addBuilding" value="Byggnad">&nbsp Byggnad</br></br>
+              <input type="checkbox" id="addAc" value="A/C">&nbsp A/C</br>
+              <input type="checkbox" id="addElevator" value="Elevator">&nbsp Hiss</br>
+              <input type="checkbox" id="addPadio" value="Padio">&nbsp Terass</br>
+              <input type="checkbox" id="addStorage" value="Storage">&nbsp Förråd</br>
+              <input type="checkbox" id="addParking" value="Parking">&nbsp Parkering</br>
+              <input type="checkbox" id="addPool" value="Pool">&nbsp Pool</br></br>
+            </div>
+          </section>
+        </div>
+        <div class="row">
+          <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " id="search1">
+            <div class="form-group">
+              <input type="text" class="form-control" id="hits" placeholder="Number of hits" style="width:150px;">
+              <input type="radio" name="nHits" id="first" value="first" checked>First<br>
+              <input type="radio" name="nHits" id="last" value="last">Last<br>
+            </div>
+          </section>
+          <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " id="search1">
+            <div class="form-group">
+              <button type="button" class="btn btn-info btn-sm sortbutt" id="btnSortName">Sort by Name</button>
+              <button type="button" class="btn btn-info btn-sm sortbutt" id="btnSortRank">Sort by Rank</button>
+              <button type="button" class="btn btn-info btn-sm sortbutt" id="btnSortStatus">Sort by Status</button>
+              <button type="button" class="btn btn-info btn-sm sortbutt" id="btnSortSpecies">Sort by Species</button>
+            </div>
+          </section>
+        </div>
+        <div class="row" id="scrollRow" style="overflow:auto; height:400px;">
+        <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="resultSection">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Rank</th>
+                        <th>Status</th>
+                        <th>Species</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </section>
+        </div>
+    </main>
+    </body>
+</html>
