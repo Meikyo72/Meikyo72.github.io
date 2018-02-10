@@ -132,7 +132,7 @@ window.onload = function () {
   // ...
 });
         function addMessToTable(data) {
-          let parentKey = snapshot.data.ref.parent.key;
+          let parentKey = ref.parent.key;
           console.log(parentKey);
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td>`;
