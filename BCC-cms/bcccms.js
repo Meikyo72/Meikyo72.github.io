@@ -139,7 +139,6 @@ window.onload = function () {
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
-                key.value='';
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
