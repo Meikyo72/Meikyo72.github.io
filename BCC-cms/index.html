@@ -75,18 +75,18 @@
               <input type="number" id="addTraining" value="0">&nbsp Avstånd till Träningsmöjligheter</br>
               <input type="number" id="addSchool" value="0">&nbsp Avstånd till Skolor</br></br>
 
-              <input type="checkbox" id="addSell" value=false>&nbsp Till Salu</br>
-              <input type="checkbox" id="addRent" value=false>&nbsp Uthyres</br></br>
-              <input type="checkbox" id="addFlat" value="Lägenhet">&nbsp Lägenhet</br>
-              <input type="checkbox" id="addHouse" value="Hus">&nbsp Hus/Villa</br>
-              <input type="checkbox" id="addLocale" value="Lokal">&nbsp Lokal</br>
-              <input type="checkbox" id="addBuilding" value="Byggnad">&nbsp Byggnad</br></br>
-              <input type="checkbox" id="addAc" value="A/C">&nbsp A/C</br>
-              <input type="checkbox" id="addElevator" value="Elevator">&nbsp Hiss</br>
-              <input type="checkbox" id="addPadio" value="Padio">&nbsp Terass</br>
-              <input type="checkbox" id="addStorage" value="Storage">&nbsp Förråd</br>
-              <input type="checkbox" id="addParking" value="Parking">&nbsp Parkering</br>
-              <input type="checkbox" id="addPool" value="Pool">&nbsp Pool</br></br>
+              <input type="checkbox" id="addSell">&nbsp Till Salu</br>
+              <input type="checkbox" id="addRent">&nbsp Uthyres</br></br>
+              <input type="checkbox" id="addFlat">&nbsp Lägenhet</br>
+              <input type="checkbox" id="addHouse">&nbsp Hus/Villa</br>
+              <input type="checkbox" id="addLocale">&nbsp Lokal</br>
+              <input type="checkbox" id="addBuilding">&nbsp Byggnad</br></br>
+              <input type="checkbox" id="addAc">&nbsp A/C</br>
+              <input type="checkbox" id="addElevator">&nbsp Hiss</br>
+              <input type="checkbox" id="addPadio">&nbsp Terass</br>
+              <input type="checkbox" id="addStorage">&nbsp Förråd</br>
+              <input type="checkbox" id="addParking">&nbsp Parkering</br>
+              <input type="checkbox" id="addPool">&nbsp Pool</br></br>
             </div>
           </section>
         </div>
@@ -112,10 +112,10 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Rank</th>
-                        <th>Status</th>
-                        <th>Species</th>
+                        <th onclick="sortInternalID" class="sortbutt">Internt Referensnummer</th>
+                        <th onclick="sortIDnr" class="sortbutt">Publikt Referensnummer</th>
+                        <th onclick="sortAdress" class="sortbutt">Objektets Adress</th>
+                        <th onclick="sortCity" class="sortbutt">Stad/Ort</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">

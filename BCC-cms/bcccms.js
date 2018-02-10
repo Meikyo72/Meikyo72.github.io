@@ -3,12 +3,8 @@ window.onload = function () {
     let loggaIn = document.getElementById('loggaIn');
     let theUser = document.getElementById('theUser');
     var provider = new firebase.auth.GithubAuthProvider();
-    /*let hits = document.getElementById('hits');
+    let hits = document.getElementById('hits');
     let subb = document.getElementById('subb');
-    let addName = document.getElementById('addName');
-    let addRank = document.getElementById('addRank');
-    let addStatus = document.getElementById('addStatus');
-    let addSpecies = document.getElementById('addSpecies');
     let tableBody = document.getElementById('tableBody');
     let scrollRow = document.getElementById('scrollRow');
     let sortbutt = document.getElementsByClassName('sortbutt');
@@ -19,7 +15,7 @@ window.onload = function () {
     let nHits = document.getElementsByName('nHits');
     let first = document.getElementById('first');
     let last = document.getElementById('last');
-*/
+/* start of input variables */
   let addInternalID = document.getElementById('addInternalID');
   let addAdress = document.getElementById('addAdress');
   let addOwner = document.getElementById('addOwner');
@@ -77,10 +73,47 @@ window.onload = function () {
 
     submit.addEventListener('click', function(event) {
 				firebase.database().ref('bcc/').push({
+          internalID: addInternalID.value,
+          adress: addAdress.value,
+          owner: addOwner.value,
+          ownerAdress: addOwnerAdress.value,
+          email: addEmail.value,
+          telephone: addTelephone.value,
+          idNr: addIDnr.value,
+          picUrl: addPic.value,
 					description: addDescription.value,
+          zip: addZip.value,
+          city: addCity.value,
+          zone: addZone.value,
 					price: addPrice.value,
+          rooms: addRooms.value,
+          kitchen: addKitchen.value,
+          bedroom: addBedroom.value,
+          wc: addWC.value,
+          size: addSize.value,
+          propertySize: addPropertySize.value,
+          beach: addBeach.value,
+          marina: addMarina.value,
+          transportation: addTransportation.value,
+          shopping: addShopping.value,
+          medic: addMedic.value,
+          golf: addGolf.value,
+          tennis: addTennis.value,
+          parks: addParks.value,
+          training: addTraining.value,
+          school: addSchool.value,
 					sell: addSell.checked,
-					rent: addRent.checked
+					rent: addRent.checked,
+          flat: addFlat.checked,
+          house: addHouse.checked,
+          locale: addLocale.checked,
+          building: addBuilding.checked,
+          ac: addAc.checked,
+          elevator: addElevator.checked,
+          padio: addPadio.checked,
+          storage: addStorage.checked,
+          parking: addParking.checked,
+          pool: addPool.checked
 				});
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
@@ -100,12 +133,12 @@ window.onload = function () {
 });
         function addMessToTable(data) {
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.description}</td> <td>${data.price}</td> <td>${data.sell}</td> <td>${data.rent}</td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td>`;
 				tableBody.appendChild(tr);
-                addDescription.value='';
-                addPrice.value='';
-                addSell.value='';
-                addRent.value='';
+                addInternalID.value='';
+                addIDnr.value='';
+                addAdress.value='';
+                addCity.value='';
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
@@ -118,10 +151,10 @@ window.onload = function () {
 					});
 				})
 			}
-			sortFunc(btnSortName, 'name');
-			sortFunc(btnSortRank, 'rank');
-			sortFunc(btnSortStatus, 'status');
-			sortFunc(btnSortSpecies, 'species');
+			sortFunc(sortInternalID, 'internalID');
+			sortFunc(sortIDnr, 'idNr');
+			sortFunc(sortAdress, 'adress');
+			sortFunc(sortCity, 'city');
 
 			hits.addEventListener('keypress', function(event) {
 				if( event.keyCode == 13 ) {
