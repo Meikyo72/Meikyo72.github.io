@@ -8,10 +8,10 @@ window.onload = function () {
     let tableBody = document.getElementById('tableBody');
     let scrollRow = document.getElementById('scrollRow');
     let sortbutt = document.getElementsByClassName('sortbutt');
-    let btnSortName = document.getElementById('btnSortName');
-    let btnSortRank = document.getElementById('btnSortRank');
-    let btnSortStatus = document.getElementById('btnSortStatus');
-    let btnSortSpecies = document.getElementById('btnSortSpecies');
+    let sortInternalID = document.getElementById('sortInternalID');
+    let sortIDnr = document.getElementById('sortIDnr');
+    let sortAdress = document.getElementById('sortAdress');
+    let sortCity = document.getElementById('sortCity');
     let nHits = document.getElementsByName('nHits');
     let first = document.getElementById('first');
     let last = document.getElementById('last');
@@ -145,8 +145,8 @@ window.onload = function () {
 					tableBody.innerHTML = '';
 					firebase.database().ref('bcc/').orderByChild(sortKey)
 					.once('value', function(snapshot) {
-						snapshot.forEach( crewRef => {
-							addMessToTable(crewRef.val());
+						snapshot.forEach( bccRef => {
+							addMessToTable(bccRef.val());
 						})
 					});
 				})
