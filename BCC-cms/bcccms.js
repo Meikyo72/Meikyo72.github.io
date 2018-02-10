@@ -131,7 +131,7 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
-        function addMessToTable(data) {
+        function addMessToTable(data, child) {
         console.log(child.key);
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td>`;
