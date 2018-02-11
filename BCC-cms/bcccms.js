@@ -109,9 +109,10 @@ window.onload = function () {
           padio: addPadio.checked,
           storage: addStorage.checked,
           parking: addParking.checked,
-          pool: addPool.checked,
-          dbObjectKey: newPostRef.key
+          pool: addPool.checked
 				});
+        var dbObjectKey = newPostRef.key;
+        console.log('Lagt till '+ dbObjectKey);
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
 				let data = snapshot.val();
@@ -132,7 +133,7 @@ window.onload = function () {
         function addMessToTable(data, idKey) {
           console.log(idKey);
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td>${data.dbObjectKey}</td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td>${dbObjectKey}</td>`;
 				tableBody.appendChild(tr);
                 addInternalID.value='';
                 addIDnr.value='';
