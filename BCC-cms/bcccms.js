@@ -138,7 +138,7 @@ window.onload = function () {
                 addAdress.value='';
                 addCity.value='';
                 document.getElementById('delete').addEventListener('click', function(event){
-                  firebase.database().ref('bcc/').once('child_added', function(snapshot, prevChildKey) {
+                  firebase.database().ref('bcc/').once('value', function(snapshot, prevChildKey) {
                     let key = snapshot.key;
                     console.log('TA bort key ' + key);
                     //firebase.database().ref('bcc/' + key).remove();
