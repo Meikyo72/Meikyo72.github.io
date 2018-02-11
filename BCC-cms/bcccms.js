@@ -138,7 +138,7 @@ window.onload = function () {
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
-                dbObjectKey;
+                dbObjectKey.value='';
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
