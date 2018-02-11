@@ -137,6 +137,9 @@ window.onload = function () {
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
+                function deleteFunction(dbObjectKey){
+                  firebase.database().ref('bcc/' + dbObjectKey).remove();
+                }
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
@@ -154,9 +157,6 @@ window.onload = function () {
 			sortFunc(sortIDnr, 'idNr');
 			sortFunc(sortAdress, 'adress');
 			sortFunc(sortCity, 'city');
-      function deleteFunction(dbObjectKey){
-        firebase.database().ref('bcc/' + dbObjectKey).remove();
-      }
     });
 
 
