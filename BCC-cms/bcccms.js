@@ -137,6 +137,9 @@ window.onload = function () {
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
+                document.getElementById('delete').addEventListener('click', function(event){
+                  firebase.database().ref('bcc/' + key).remove();
+                })
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
@@ -150,9 +153,6 @@ window.onload = function () {
 					});
 				})
 			}
-      document.getElementById('delete').addEventListener('click', function(event){
-        firebase.database().ref('bcc/' + key).remove();
-      })
 			sortFunc(sortInternalID, 'internalID');
 			sortFunc(sortIDnr, 'idNr');
 			sortFunc(sortAdress, 'adress');
