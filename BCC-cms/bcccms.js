@@ -146,6 +146,7 @@ window.onload = function () {
 					firebase.database().ref('bcc/').orderByChild(sortKey)
 					.once('value', function(snapshot) {
 						snapshot.forEach( bccRef => {
+              console.log(snapshot.key);
 							addMessToTable(bccRef.val());
 						})
 					});
