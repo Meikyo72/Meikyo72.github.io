@@ -4,7 +4,6 @@ window.onload = function () {
     let theUser = document.getElementById('theUser');
     var provider = new firebase.auth.GoogleAuthProvider();
     let hits = document.getElementById('hits');
-    let submit = document.getElementById('submit');
     let tableBody = document.getElementById('tableBody');
     let scrollRow = document.getElementById('scrollRow');
     let sortbutt = document.getElementsByClassName('sortbutt');
@@ -117,6 +116,7 @@ window.onload = function () {
 				});
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
+      console.log(snapshot.key());
 				let data = snapshot.val();
 				addMessToTable(data);
 			});
