@@ -138,10 +138,10 @@ window.onload = function () {
                 addAdress.value='';
                 addCity.value='';
                 document.getElementById('delete').addEventListener('click', function(event){
-                  firebase.database().ref('bcc/').on('value', function(snapshot) {
+                  firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
                     let key = snapshot.key;
-                    console.log('TA bort key' + key);
-                    firebase.database().ref('bcc/' + key).remove();
+                    console.log('TA bort key ' + key);
+                    //firebase.database().ref('bcc/' + key).remove();
                   });
                 })
 			}
