@@ -11,9 +11,6 @@ window.onload = function () {
     let sortIDnr = document.getElementById('sortIDnr');
     let sortAdress = document.getElementById('sortAdress');
     let sortCity = document.getElementById('sortCity');
-    let nHits = document.getElementsByName('nHits');
-    let first = document.getElementById('first');
-    let last = document.getElementById('last');
 /* start of input variables */
   let addInternalID = document.getElementById('addInternalID');
   let addAdress = document.getElementById('addAdress');
@@ -140,7 +137,6 @@ window.onload = function () {
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
-                idKey.value='';
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
@@ -157,30 +153,6 @@ window.onload = function () {
 			sortFunc(sortIDnr, 'idNr');
 			sortFunc(sortAdress, 'adress');
 			sortFunc(sortCity, 'city');
-
-			hits.addEventListener('keypress', function(event) {
-				if( event.keyCode == 13 ) {
-					let antal = Number(hits.value);
-					tableBody.innerHTML = '';
-					if( isNaN(antal) ) {
-						hits.value = 'Input a number';
-					} else  if(first.checked == true){
-						firebase.database().ref('bcc/').limitToFirst(antal)
-						.once('value', function(snapshot) {
-								snapshot.forEach( crewRef => {
-									addMessToTable(crewRef.val());
-								})
-						});
-					} else {
-                        firebase.database().ref('bcc/').limitToLast(antal)
-						.once('value', function(snapshot) {
-								snapshot.forEach( crewRef => {
-									addMessToTable(crewRef.val());
-								})
-						});
-                    }
-				}
-			});
     });
 
 
