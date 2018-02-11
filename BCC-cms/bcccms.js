@@ -116,8 +116,7 @@ window.onload = function () {
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
 				let data = snapshot.val();
-        let idKey = snapshot.key;
-				addMessToTable(data, idKey);
+				addMessToTable(data);
 			});
 
       }).catch(function(error) {
@@ -138,7 +137,6 @@ window.onload = function () {
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
-                dbObjectKey='';
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
