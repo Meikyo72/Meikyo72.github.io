@@ -116,7 +116,7 @@ window.onload = function () {
 				});
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
-      console.log(snapshot.key());
+      console.log(snapshot.key);
 				let data = snapshot.val();
 				addMessToTable(data);
 			});
