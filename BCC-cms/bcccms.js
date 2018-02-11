@@ -131,19 +131,12 @@ window.onload = function () {
 });
         function addMessToTable(data, dbObjectKey) {
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm" id="delete">${`Ta Bort`}</button></td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm" id="delete" oncklick="console.log('hej')">${`Ta Bort`}</button></td>`;
 				tableBody.appendChild(tr);
                 addInternalID.value='';
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
-                document.getElementById('delete').addEventListener('click', function(event){
-                  firebase.database().ref('bcc/').once('value', function(snapshot, prevChildKey) {
-                    let key = snapshot.key;
-                    console.log('TA bort key ' + key);
-                    //firebase.database().ref('bcc/' + key).remove();
-                  });
-                })
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
