@@ -113,6 +113,7 @@ window.onload = function () {
 				});
         var dbObjectKey = newPostRef.key;
         console.log('Lagt till '+ dbObjectKey);
+        firebase.database().ref().child('bcc/' + dbObjectKey).update({objectKey: dbObjectKey});
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
 				let data = snapshot.val();
