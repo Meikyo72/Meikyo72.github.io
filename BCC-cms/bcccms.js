@@ -129,7 +129,7 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
-        function addMessToTable(data, dbObjectKey) {
+        function addMessToTable(data, dbObjectKey, deleteFunction) {
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm" id="delete" onclick="deleteFunction(dbObjectKey)">${`Ta Bort`}</button></td>`;
 				tableBody.appendChild(tr);
@@ -137,9 +137,6 @@ window.onload = function () {
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
-                function deleteFunction(dbObjectKey){
-                  firebase.database().ref('bcc/' + dbObjectKey).remove();
-                }
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
@@ -157,6 +154,9 @@ window.onload = function () {
 			sortFunc(sortIDnr, 'idNr');
 			sortFunc(sortAdress, 'adress');
 			sortFunc(sortCity, 'city');
+      function deleteFunction(dbObjectKey){
+        firebase.database().ref('bcc/' + dbObjectKey).remove();
+      }
     });
 
 
