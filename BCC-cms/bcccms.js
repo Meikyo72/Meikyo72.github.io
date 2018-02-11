@@ -130,8 +130,7 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
-        function addMessToTable(data, idKey) {
-          console.log(idKey);
+        function addMessToTable(data, dbObjectKey) {
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td>${dbObjectKey}</td>`;
 				tableBody.appendChild(tr);
