@@ -140,6 +140,7 @@ window.onload = function () {
                 document.getElementById('delete').addEventListener('click', function(event){
                   firebase.database().ref('bcc/').on('value', function(snapshot) {
                     let key = snapshot.key;
+                    console.log('TA bort key' + key);
                     firebase.database().ref('bcc/' + key).remove();
                   });
                 })
