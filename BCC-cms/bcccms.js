@@ -117,7 +117,8 @@ window.onload = function () {
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
 				let data = snapshot.val();
-				addMessToTable(data);
+        let idKey = snapshot.key;
+				addMessToTable(data, idKey);
 			});
 
       }).catch(function(error) {
@@ -130,8 +131,8 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
-        function addMessToTable(data) {
-          console.log(snapshot.key);
+        function addMessToTable(data, idKey) {
+          console.log(idKey);
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td>`;
 				tableBody.appendChild(tr);
