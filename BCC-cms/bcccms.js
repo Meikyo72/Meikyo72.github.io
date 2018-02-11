@@ -130,9 +130,10 @@ window.onload = function () {
   var credential = error.credential;
   // ...
 });
-        function addMessToTable(data, snapshot) {
+        function addMessToTable(data) {
+          console.log(snapshot.key);
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td>${snapshot.key}</td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td>`;
 				tableBody.appendChild(tr);
                 addInternalID.value='';
                 addIDnr.value='';
