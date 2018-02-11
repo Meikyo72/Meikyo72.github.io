@@ -68,7 +68,7 @@ window.onload = function () {
 
 
     submit.addEventListener('click', function(event) {
-				firebase.database().ref('bcc/').push({
+				let newPostRef = firebase.database().ref('bcc/').push({
           internalID: addInternalID.value,
           adress: addAdress.value,
           owner: addOwner.value,
@@ -111,6 +111,8 @@ window.onload = function () {
           parking: addParking.checked,
           pool: addPool.checked
 				});
+        var dbObjectKey = newPostRef.key;
+        console.log('Lagt till '+ dbObjectKey);
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
 				let data = snapshot.val();
