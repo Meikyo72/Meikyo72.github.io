@@ -133,7 +133,7 @@ window.onload = function () {
         function addMessToTable(data) {
         let remKey = data.objectKey;
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm" onclick=deleteRow("+String(remKey)+")>Delete ${remKey}</button></td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm" onClick=deleteRow("+String(remKey)+")>Delete ${remKey}</button></td>`;
 				tableBody.appendChild(tr);
                 addInternalID.value='';
                 addIDnr.value='';
