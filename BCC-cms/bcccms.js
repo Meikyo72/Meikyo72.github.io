@@ -54,7 +54,7 @@ window.onload = function () {
   let addStorage = document.getElementById('addStorage');
   let addParking = document.getElementById('addParking');
   let addPool = document.getElementById('addPool');
-  let nDelete = document.getElementById('delete');
+  //let nDelete = document.getElementById('delete');
 
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -140,7 +140,7 @@ window.onload = function () {
                 addAdress.value='';
                 addCity.value='';
 			}
-      nDelete.addEventListener('click', function(event){
+      document.getElementById('delete').addEventListener('click', function(event){
         console.log('Rowkey '+button.value);
       })
         function sortFunc(sortbutt, sortKey) {
