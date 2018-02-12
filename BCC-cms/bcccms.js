@@ -131,8 +131,9 @@ window.onload = function () {
 });
         function addMessToTable(data) {
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td id="${data.objectKey}">${data.objectKey}</td>`;
-        tr.addEventListener('click', function(){
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td><td><button type="button" class="btn btn-info btn-sm deleteButton">${data.objectKey}</button></td>`;
+        let deleteButton = document.getElementsByClassName('deleteButton');
+        deleteButton.addEventListener('click', function(){
           let key = data.objectKey;
           firebase.database().ref('bcc/' + key).remove();
         });
