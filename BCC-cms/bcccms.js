@@ -111,7 +111,7 @@ window.onload = function () {
           parking: addParking.checked,
           pool: addPool.checked
 				});
-        var dbObjectKey = newPostRef.key;
+        var dbObjectKey = newPostRef.key.toString();
         console.log('Lagt till '+ dbObjectKey);
         firebase.database().ref().child('bcc/' + dbObjectKey).update({objectKey: dbObjectKey});
 			});
@@ -131,7 +131,7 @@ window.onload = function () {
   // ...
 });
         function addMessToTable(data) {
-        let remKey = data.objectKey.toString();
+        let remKey = data.objectKey;
         console.log(remKey);
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm" id="delete" onclick="firebase.database().ref('bcc/' + ${remKey}).remove();">${remKey}</button></td>`;
