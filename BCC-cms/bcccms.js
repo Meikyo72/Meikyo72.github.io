@@ -134,7 +134,7 @@ window.onload = function () {
         let remKey = data.objectKey;
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm" id="${remKey}" value="${remKey}">Delete ${remKey}</button></td>`;
-        console.log('Button ID ' + button.id);
+        console.log('Button ID ');
 				tableBody.appendChild(tr);
                 addInternalID.value='';
                 addIDnr.value='';
