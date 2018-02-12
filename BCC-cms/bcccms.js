@@ -135,7 +135,10 @@ window.onload = function () {
         tr.addEventListener('click', function(){
           let key = data.objectKey;
           firebase.database().ref('bcc/' + key).remove();
-          addMessToTable(data);
+          firebase.database().ref('bcc/').on('child_removed', function(snapshot){
+            let data = snapshot.val();
+            addMessToTable(data);
+          })
         });
 				tableBody.appendChild(tr);
                 addInternalID.value='';
