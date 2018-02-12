@@ -131,16 +131,16 @@ window.onload = function () {
 });
         function addMessToTable(data) {
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td id="${data.objectKey}" onclick="delRow()">${data.objectKey}</td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td id="${data.objectKey}">${data.objectKey}</td>`;
 				tableBody.appendChild(tr);
                 addInternalID.value='';
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
 			}
-      function delRow(x) {
-        console.log('Klicked this ' + x );
-      }
+      td.addEventListener('click', function(){
+        console.log('Klicked ' + td.id);
+      })
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
 					tableBody.innerHTML = '';
