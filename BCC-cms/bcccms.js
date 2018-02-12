@@ -133,7 +133,7 @@ window.onload = function () {
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td id="${data.objectKey}">${data.objectKey}</td>`;
         tr.addEventListener('click', function(){
-          console.log('Klicked row');
+          console.log('Klicked row ' + data.objectKey);
         });
 				tableBody.appendChild(tr);
                 addInternalID.value='';
