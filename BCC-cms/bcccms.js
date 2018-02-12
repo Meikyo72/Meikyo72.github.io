@@ -131,14 +131,15 @@ window.onload = function () {
 });
         function addMessToTable(data) {
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td><td><button type="button" class="btn btn-info btn-sm" id="deleteButton">${data.objectKey}</button></td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td><td><button type="button" class="btn btn-info btn-sm" id="deleteButton">Ta bort</button></td>`;
         tr.addEventListener('click', function(){
           let key = data.objectKey;
+          let conF = confirm("Vill du radera detta objekt?");
+          if (conF == true) {
           firebase.database().ref('bcc/' + key).remove();
-          firebase.database().ref('bcc/').on('child_removed', function(snapshot){
-            let data = snapshot.val();
-            addMessToTable(data);
-          })
+        } else {
+          
+        }
         });
 				tableBody.appendChild(tr);
                 addInternalID.value='';
