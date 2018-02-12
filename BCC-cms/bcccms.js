@@ -133,16 +133,17 @@ window.onload = function () {
         function addMessToTable(data) {
         let remKey = data.objectKey;
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm delete" value="${remKey}">Delete ${remKey}</button></td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td><button type="button" class="btn btn-info btn-sm" id="${remKey}" value="${remKey}">Delete ${remKey}</button></td>`;
+        console.log('Button ID ' + button.id);
 				tableBody.appendChild(tr);
                 addInternalID.value='';
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
 			}
-      document.getElementsByClassName('delete').addEventListener('click', function(event){
+      /*document.getElementsByClassName('delete').addEventListener('click', function(event){
         console.log('Rowkey '+button.value);
-      })
+      })*/
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
 					tableBody.innerHTML = '';
