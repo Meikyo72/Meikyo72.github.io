@@ -130,7 +130,6 @@ window.onload = function () {
   // ...
 });
         function addMessToTable(data) {
-        let remKey = data.objectKey;
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td>${data.objectKey}</td>`;
         console.log('Button ID ');
@@ -139,7 +138,6 @@ window.onload = function () {
                 addIDnr.value='';
                 addAdress.value='';
                 addCity.value='';
-                dbObjectKey.value='';
 			}
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
