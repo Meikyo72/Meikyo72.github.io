@@ -132,7 +132,7 @@ window.onload = function () {
         function addMessToTable(data) {
 				let tr = document.createElement('tr');
 				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td> <td id="test">${data.objectKey}</td>`;
-        .then var test = document.getElementById('test');
+        var test = document.getElementById('test');
 				tableBody.appendChild(tr);
                 addInternalID.value='';
                 addIDnr.value='';
