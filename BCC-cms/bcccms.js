@@ -140,6 +140,9 @@ window.onload = function () {
                 addAdress.value='';
                 addCity.value='';
 			}
+      function deleteRow(rowKey) {
+        console.log(rowKey);
+      }
         function sortFunc(sortbutt, sortKey) {
 				sortbutt.addEventListener('click', function(event) {
 					tableBody.innerHTML = '';
