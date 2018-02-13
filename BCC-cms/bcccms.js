@@ -55,7 +55,6 @@ window.onload = function () {
   let addParking = document.getElementById('addParking');
   let addPool = document.getElementById('addPool');
   let cmsForm = document.getElementById('cmsForm');
-  let cmsTable = document.getElementById('cmsTable');
 
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -140,7 +139,6 @@ window.onload = function () {
           let conF = confirm("Vill du radera detta objekt?");
           if (conF == true) {
           firebase.database().ref('bcc/' + key).remove();
-          cmsTable.refresh();
         } else {
 
         }
