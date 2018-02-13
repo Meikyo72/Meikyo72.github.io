@@ -54,6 +54,7 @@ window.onload = function () {
   let addStorage = document.getElementById('addStorage');
   let addParking = document.getElementById('addParking');
   let addPool = document.getElementById('addPool');
+  let cmsForm = document.getElementById('cmsForm');
 
     loggaIn.addEventListener('click', function(event){
     firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -113,6 +114,7 @@ window.onload = function () {
         var dbObjectKey = newPostRef.key.toString();
         console.log('Lagt till '+ dbObjectKey);
         firebase.database().ref().child('bcc/' + dbObjectKey).update({objectKey: dbObjectKey});
+        cmsForm.reset();
 			});
     firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
 				let data = snapshot.val();
