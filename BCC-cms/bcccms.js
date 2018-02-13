@@ -139,6 +139,10 @@ window.onload = function () {
           let conF = confirm("Vill du radera detta objekt?");
           if (conF == true) {
           firebase.database().ref('bcc/' + key).remove();
+          firebase.database().ref('bcc/').on('value', function(snapshot, prevChildKey){
+            let data = snapshot.val();
+            addMessToTable(data);
+          });
         } else {
 
         }
