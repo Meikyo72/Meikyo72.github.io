@@ -38,6 +38,8 @@ bccRef.on("child_added", function(snap, prevChildKey) {
         					<h4>Pris: {items.price} €</h4>
                   <h5>{items.city}</h5>
                   <p>{items.description}</p>
+                  <div className="row">
+                  <div className="col-md-6 col-sm-6 col-sx-6">
         					<ul>
                     <li>Zon: {items.zone}</li>
                     <li>Storlek: {items.size} m&sup2;</li>
@@ -51,6 +53,14 @@ bccRef.on("child_added", function(snap, prevChildKey) {
                     <li>Terass: {items.padio ? 'ja' : 'nej'}</li>
                     <li>Hiss: {items.elevator ? 'ja' : 'nej'}</li>
                   </ul>
+                </div>
+                <div className="col-md-6 col-sm-6 col-sx-6">
+                  <ul>
+                    <li>Strand: {items.beach} meter</li>
+                    <li>Marina: {items.marina} meter</li>
+                  </ul>
+                </div>
+                </div>
         				</div>
         			</div>
         		</div>
