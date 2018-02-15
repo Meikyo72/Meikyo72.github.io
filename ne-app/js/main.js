@@ -19,7 +19,9 @@ bccRef.on("child_added", function(snap, prevChildKey) {
             <h4>Nielsen Estate</h4></div></a></div><button><a href="#myModal" data-toggle="modal">Detaljerad Information</a></button></div>
         );
       return (
+        <div>
         {newodatalist}
+      </div>
       )
     }
   }
