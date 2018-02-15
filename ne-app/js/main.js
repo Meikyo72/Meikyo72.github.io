@@ -44,6 +44,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
                     <li>Sovrum: {items.bedroom}</li>
                     <li>Badrum: {items.wc}</li>
                     <li>AC: {items.ac ? 'ja' : 'nej'}</li>
+                    <li>Hiss: {items.elevator ? 'ja' : 'nej'}</li>
                   </ul>
         				</div>
         			</div>
