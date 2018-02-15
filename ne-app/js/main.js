@@ -1,4 +1,4 @@
-import React from 'react';
+/** @jsx React.DOM */
 //window.onload = function () {
 /*let objectPrensentation = document.getElementById('object-presentation');
 let modalDiv = document.getElementById('modalDiv');
