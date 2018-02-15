@@ -58,6 +58,14 @@ bccRef.on("child_added", function(snap, prevChildKey) {
                   <ul>
                     <li>Strand: {items.beach} meter</li>
                     <li>Marina: {items.marina} meter</li>
+                    <li>Golfbana: {items.golf} meter</li>
+                    <li>Tennis: {items.tennis} meter</li>
+                    <li>Träningsfacilitet: {items.training} meter</li>
+                    <li>Shopping: {items.shopping} meter</li>
+                    <li>Transporter: {items.transportation} meter</li>
+                    <li>Skolor: {items.school} meter</li>
+                    <li>Apotek/Läkare: {items.medic} meter</li>
+                    <li>Parker: {items.parks} meter</li>
                   </ul>
                 </div>
                 </div>
