@@ -36,7 +36,14 @@ bccRef.on("child_added", function(snap, prevChildKey) {
         				<div className="modal-body modal-spa">
         					<img src={items.picUrl} className="img-responsive" alt=""/>
         					<h4>Pris: {items.price} €</h4>
-        					<p>Test info </p>
+                  <h5>{items.city}</h5>
+                  <p>{items.description}</p>
+        					<ul>
+                    <li>Zon: {items.zone}</li>
+                    <li>Rum: {items.rooms}</li>
+                    <li>Sovrum: {items.bedroom}</li>
+                    <li>Badrum: {items.wc}</li>
+                  </ul>
         				</div>
         			</div>
         		</div>
