@@ -15,7 +15,6 @@ bccRef.on("child_added", function(snap, prevChildKey) {
     render() {
       console.log(oDataList);
         let newodatalist = oDataList.map(
-          console.log(newodatalist);
           item => <a key={item.objectKey} href="{item.picUrl}" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img class="img-responsive " src="{item.picUrl}" alt=""  /><div class="wthree-pcatn"><h4>Nielsen Estate</h4></div></a>
         );
       return (
