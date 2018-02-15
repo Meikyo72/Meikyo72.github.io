@@ -34,7 +34,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
         					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         				</div>
         				<div className="modal-body modal-spa">
-        					<img src={item.picUrl} className="img-responsive" alt=""/>
+        					<img src={items.picUrl} className="img-responsive" alt=""/>
         					<h4>Blanditiis deleniti</h4>
         					<p>Test info </p>
         				</div>
