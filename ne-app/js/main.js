@@ -22,10 +22,7 @@ class RealObject extends Ract.Component {
     )
   }
 }
-ReactDOM.render (
-  <div>
-    <RealObject />
-  </div>
+ReactDOM.render ( <RealObject />,
   document.getElementById('objectprensentation')
 );
 }
