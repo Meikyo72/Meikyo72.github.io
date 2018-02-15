@@ -6,7 +6,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
   //console.log(snap.val());
   let oDataList = snap.val();
   console.log(oDataList);
-  return oDtaList;
+  return oDataList;
   snap.forEach(function(childSnapshot) {
     let key = childSnapshot.key;
     let childData = childSnapshot.val();
