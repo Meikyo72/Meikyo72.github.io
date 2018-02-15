@@ -1,6 +1,7 @@
 window.onload = function () {
 let db = firebase.database();
 let bccRef = db.ref('bcc/');
+let oDataList =[];
 
 bccRef.on("child_added", function(snap, prevChildKey) {
   //console.log(snap.val());
@@ -21,7 +22,7 @@ class RealObject extends React.Component {
     return (
       <div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="Busy streets">
         <div class="agileits-img">
-          {newodatalist}  
+          {newodatalist}
         </div>
         <button><a href="#myModal" data-toggle="modal">Detaljerad Information</a></button>
       </div>
