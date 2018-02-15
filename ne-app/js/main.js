@@ -39,7 +39,9 @@ bccRef.on("child_added", function(snap, prevChildKey) {
                   <h5>{items.city}</h5>
                   <p>{items.description}</p>
                   <div className="row">
-                  <div className="col-md-6 col-sm-6 col-sx-6">
+                  <div className="col-md-2 col-sm-2 col-sx-2">
+                  </div>
+                  <div className="col-md-5 col-sm-5 col-sx-5">
         					<ul>
                     <li>Zon: {items.zone}</li>
                     <li>Storlek: {items.size} m&sup2;</li>
@@ -54,7 +56,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
                     <li>Hiss: {items.elevator ? 'ja' : 'nej'}</li>
                   </ul>
                 </div>
-                <div className="col-md-6 col-sm-6 col-sx-6">
+                <div className="col-md-5 col-sm-5 col-sx-5">
                   <ul>
                     <li>Strand: {items.beach} meter</li>
                     <li>Marina: {items.marina} meter</li>
