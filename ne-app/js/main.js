@@ -13,7 +13,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
     //console.log(key +' '+ childData);
   });
 });*/
-class RealObject extends Ract.Component {
+class RealObject extends React.Component {
   render() {
     return (
       <div>
