@@ -1,6 +1,4 @@
 //window.onload = function () {
-/*let objectPrensentation = document.getElementById('object-presentation');
-let modalDiv = document.getElementById('modalDiv');
 let db = firebase.database();
 let bccRef = db.ref('bcc/');
 
@@ -9,10 +7,10 @@ bccRef.on("child_added", function(snap, prevChildKey) {
   makeDivFunc(snap.val());
   snap.forEach(function(childSnapshot) {
     let key = childSnapshot.key;
-    var childData = childSnapshot.val();
+    let childData = childSnapshot.val();
     //console.log(key +' '+ childData);
   });
-});*/
+});
 class RealObject extends React.Component {
   render() {
     return (
