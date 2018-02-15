@@ -26,6 +26,6 @@ ReactDOM.render (
   <div>
     <RealObject />
   </div>
-  document.getElementById('object-prensentation')
+  document.getElementById('objectprensentation')
 );
 }
