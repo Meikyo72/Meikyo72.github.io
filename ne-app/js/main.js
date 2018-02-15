@@ -3,7 +3,10 @@ let db = firebase.database();
 let bccRef = db.ref('bcc/');
 
 bccRef.on("child_added", function(snap, prevChildKey) {
-  console.log(snap.val());
+  //console.log(snap.val());
+  let oDataList = snap.val();
+  console.log(oDataList);
+  return oDtaList;
   snap.forEach(function(childSnapshot) {
     let key = childSnapshot.key;
     let childData = childSnapshot.val();
