@@ -1,4 +1,4 @@
-window.onload = function () {
+//window.onload = function () {
 /*let objectPrensentation = document.getElementById('object-presentation');
 let modalDiv = document.getElementById('modalDiv');
 let db = firebase.database();
@@ -25,4 +25,4 @@ class RealObject extends Ract.Component {
 ReactDOM.render ( <RealObject />,
   document.getElementById('objectprensentation')
 );
-}
+//}
