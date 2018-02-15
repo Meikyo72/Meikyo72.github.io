@@ -15,11 +15,15 @@ bccRef.on("child_added", function(snap, prevChildKey) {
 });
 class RealObject extends React.Component {
   render() {
+    function (oDataList) {
+      let newodatalist = oDataList.map(
+        item => <a href="{item.picUrl}" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img class="img-responsive " src="{item.picUrl}" alt=""  />
+      );
+    }
     return (
       <div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="Busy streets">
         <div class="agileits-img">
-          <a href="images/g1.jpg" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-            <img class="img-responsive " src="images/g1.jpg" alt=""  />
+          {newodatalist}
             <div class="wthree-pcatn">
               <h4>Nielsen Estate</h4>
             </div>
