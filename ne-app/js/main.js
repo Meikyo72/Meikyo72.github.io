@@ -23,6 +23,6 @@ class RealObject extends React.Component {
   }
 }
 ReactDOM.render ( <RealObject />,
-  document.getElementById('objectprensentation')
+  document.getElementById('Petri')
 );
 //}
