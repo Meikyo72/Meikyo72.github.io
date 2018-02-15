@@ -16,16 +16,12 @@ bccRef.on("child_added", function(snap, prevChildKey) {
 class RealObject extends React.Component {
   render() {
       let newodatalist = oDataList.map(
-        item => <a href="{item.picUrl}" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img class="img-responsive " src="{item.picUrl}" alt=""  />
+        item => <a href="{item.picUrl}" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img class="img-responsive " src="{item.picUrl}" alt=""  /><div class="wthree-pcatn"><h4>Nielsen Estate</h4></div></a>
       );
     return (
       <div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="Busy streets">
         <div class="agileits-img">
-          {newodatalist}
-            <div class="wthree-pcatn">
-              <h4>Nielsen Estate</h4>
-            </div>
-          </a>
+          {newodatalist}  
         </div>
         <button><a href="#myModal" data-toggle="modal">Detaljerad Information</a></button>
       </div>
