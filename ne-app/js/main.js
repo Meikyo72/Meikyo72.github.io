@@ -6,7 +6,7 @@ let oDataList =[];
 bccRef.on("child_added", function(snap, prevChildKey) {
   //console.log(snap.val());
   oDataList = snap.val();
-  console.log(oDataList);
+  //console.log(oDataList);
   return oDataList;
   snap.forEach(function(childSnapshot) {
     let key = childSnapshot.key;
@@ -16,8 +16,9 @@ bccRef.on("child_added", function(snap, prevChildKey) {
 });
 class RealObject extends React.Component {
   render() {
+    console.log(oDataList);
       let newodatalist = oDataList.map(
-        item => <a href="{this.props.item.picUrl}" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img class="img-responsive " src="{this.props.item.picUrl}" alt=""  /><div class="wthree-pcatn"><h4>Nielsen Estate</h4></div></a>
+        item => <a href="{item.picUrl}" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img class="img-responsive " src="{item.picUrl}" alt=""  /><div class="wthree-pcatn"><h4>Nielsen Estate</h4></div></a>
       );
     return (
       <div class="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="Busy streets">
