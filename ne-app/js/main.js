@@ -26,9 +26,8 @@ bccRef.on("child_added", function(snap, prevChildKey) {
       )
     }
   }
+  ReactDOM.render ( <RealObject />,
+    document.getElementById('Petri')
+  );
 });
-
-ReactDOM.render ( <RealObject />,
-  document.getElementById('Petri')
-);
 }
