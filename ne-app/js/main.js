@@ -4,7 +4,8 @@ let bccRef = db.ref('bcc/');
 let oDataList =[];
 
 bccRef.on("child_added", function(snap, prevChildKey) {
-  oDataList = snap.val();
+  let theList = snap.val();
+  oDataList.push(theList);
   snap.forEach(function(childSnapshot) {
     let key = childSnapshot.key;
     let childData = childSnapshot.val();
