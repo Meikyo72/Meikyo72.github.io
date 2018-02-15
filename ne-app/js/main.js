@@ -1,9 +1,9 @@
-//window.onload = function () {
+window.onload = function () {
 let db = firebase.database();
 let bccRef = db.ref('bcc/');
 
 bccRef.on("child_added", function(snap, prevChildKey) {
-  //console.log(snap.val());
+  console.log(snap.val());
   snap.forEach(function(childSnapshot) {
     let key = childSnapshot.key;
     let childData = childSnapshot.val();
@@ -30,4 +30,4 @@ class RealObject extends React.Component {
 ReactDOM.render ( <RealObject />,
   document.getElementById('Petri')
 );
-//}
+}
