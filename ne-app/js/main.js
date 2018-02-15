@@ -14,7 +14,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
     render() {
         let newodatalist = oDataList.map(
           item => <div key={item.objectKey} className="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="Busy streets"><div className="agileits-img"><a href={item.picUrl} className="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img className="img-responsive " src={item.picUrl} alt="" /><div className="wthree-pcatn">
-            <h4>Nielsen Estate</h4></div></a></div><button><a href="#"+{item.objectKey} data-toggle="modal">Detaljerad Information</a></button></div>
+            <h4>Nielsen Estate</h4></div></a></div><button><a href="#"{item.objectKey} data-toggle="modal">Detaljerad Information</a></button></div>
         );
       return (
         <div>
