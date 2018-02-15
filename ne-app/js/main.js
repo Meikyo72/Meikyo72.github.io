@@ -40,10 +40,15 @@ bccRef.on("child_added", function(snap, prevChildKey) {
                   <p>{items.description}</p>
         					<ul>
                     <li>Zon: {items.zone}</li>
+                    <li>Storlek: {items.size} m&sup2;</li>
+                    <li>Tomtstorlek: {items.propertySize} m&sup2;</li>
                     <li>Rum: {items.rooms}</li>
                     <li>Sovrum: {items.bedroom}</li>
                     <li>Badrum: {items.wc}</li>
                     <li>AC: {items.ac ? 'ja' : 'nej'}</li>
+                    <li>Parkering: {items.parking ? 'ja' : 'nej'}</li>
+                    <li>Pool: {items.pool ? 'ja' : 'nej'}</li>
+                    <li>Terass: {items.padio ? 'ja' : 'nej'}</li>
                     <li>Hiss: {items.elevator ? 'ja' : 'nej'}</li>
                   </ul>
         				</div>
