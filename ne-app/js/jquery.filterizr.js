@@ -703,9 +703,6 @@
         * @private
         */
         _handleFiltering: function(target) {
-          if(!target){
-            var target = 0;
-          }
             var self = this,
                 toFilterOut = self._getArrayOfUniqueItems(self._activeArray, target);
             //Minimize all .filtr-item elements that are not the same between categories

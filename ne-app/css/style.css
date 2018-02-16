@@ -709,7 +709,7 @@ h2.tittle {
 h3.w3title{
     font-size: 3.8em;
     text-align: center;
-    color: #0066ff;
+    color: #0d0d26;
 }
 p.wthree-ttext{
     font-size: 1em;
@@ -857,12 +857,12 @@ ul.simplefilter {
 	font-size:1em;
 }
 .simplefilter li:hover {
-    border-color: #02b875;
-    color: #02b875;
+    border-color: #0d0d26;
+    color: #0d0d26;
 }
 .simplefilter li.active {
-	border-color: #02b875;
-    background-color: #02b875;
+	border-color: #0d0d26;
+    background-color: #0d0d26;
     color: #fff;
 }
 .agileits-img a{
