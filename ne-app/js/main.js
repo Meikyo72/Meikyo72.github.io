@@ -13,7 +13,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
   class RealObject extends React.Component {
     render() {
         let newodatalist = oDataList.map(
-          item => <div key={item.objectKey} className="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category="1" data-sort="Busy streets"><div className="agileits-img"><a href={item.picUrl} title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img className="img-responsive " src={item.picUrl} alt="" /><div className="wthree-pcatn">
+          item => <div key={item.objectKey} className="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category={item.flat ? '1' : ''}{item.house ? '2' : ''}{item.building ? '3' : ''}{item.locale ? '3' : ''} data-sort="Busy streets"><div className="agileits-img"><a href={item.picUrl} className="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img className="img-responsive " src={item.picUrl} alt="" /><div className="wthree-pcatn">
             <h4>Nielsen Estate</h4></div></a></div><button><a href={'#' + item.objectKey} data-toggle="modal">Detaljerad Information</a></button></div>
         );
       return (
@@ -25,7 +25,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
   }
   class ModalObject extends React.Component {
     render() {
-      console.log(oDataList);
+      //console.log(oDataList);
         let newmodallist = oDataList.map(
           items => <div  key={items.objectKey} className="modal bnr-modal fade" id={items.objectKey} tabindex="-1" role="dialog">
         		<div className="modal-dialog" role="document">
