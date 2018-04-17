@@ -1035,14 +1035,14 @@ ul.simplefilter {
     margin-top: 4em;
 }
 .testimonials-grid p {
-    color: #f44336;
+    color: #0d0d26;
     text-align: center;
     margin: 1.5em 0;
     font-size: 1.1em;
 }
 .testimonials-grid h5 {
     font-size: 1.5em;
-    color: #f44336;
+    color: #0d0d26;
     text-align: center;
     font-weight: 400;
     letter-spacing: 2px;
@@ -1113,7 +1113,7 @@ ul.simplefilter {
 /*-- //news --*/
 /*-- contact --*/
 .contact p.wthree-ttext {
-    color: #f44336;
+    color: #0d0d26;
 }
 .contact-w3ls-row {
     width: 70%;
@@ -1121,14 +1121,14 @@ ul.simplefilter {
 }
 .contact input[type="text"] {
     width: 48.5%;
-    color: #f44336;
+    color: #0d0d26;
     float: left;
     background: none;
     outline: none;
     font-size: 1em;
     padding: .7em 1em;
     margin-bottom: 1.5em;
-    border: solid 1px #fff;
+    border: solid 1px #0d0d26;
     -webkit-appearance: none;
     display: inline-block;
 }
@@ -1139,17 +1139,17 @@ ul.simplefilter {
     resize: none;
     width: 100%;
     background: none;
-    color: #f44336;
+    color: #0d0d26;
     font-size: 1em;
     outline: none;
     padding: .6em .8em;
-    border: solid 1px #fff;
+    border: solid 1px #0d0d26;
     min-height: 12em;
     -webkit-appearance: none;
 }
 .contact input[type="submit"] {
     outline: none;
-    color: #f44336;
+    color: #0d0d26;
     padding: 0.8em 4em;
     font-size: 1em;
     margin: 1em 0 0 0;
@@ -1167,16 +1167,16 @@ ul.simplefilter {
     border-color: #02b875;
 }
 ::-webkit-input-placeholder {
-	color:#f44336 !important;
+	color:#0d0d26 !important;
 }
 :-moz-placeholder { /* Firefox 18- */
-	color:#f44336 !important;
+	color:#0d0d26 !important;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-	color:#f44336 !important;
+	color:#0d0d26 !important;
 }
 :-ms-input-placeholder {
-	color:#f44336 !important;
+	color:#0d0d26 !important;
 }
 .map iframe {
     width: 100%;
@@ -1198,7 +1198,7 @@ ul.simplefilter {
 	color: #777;
 }
 .address-grids p a:hover{
-	color: #F44336;
+	color: #0d0d26;
 }
 /*-- //contact --*/
 /*-- footer --*/
