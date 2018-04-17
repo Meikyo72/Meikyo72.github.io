@@ -1035,7 +1035,7 @@ ul.simplefilter {
     margin-top: 4em;
 }
 .testimonials-grid p {
-    color: #fff;
+    color: #f44336;
     text-align: center;
     margin: 1.5em 0;
     font-size: 1.1em;
@@ -1073,7 +1073,7 @@ ul.simplefilter {
 	transition:.5s all;
 }
 .date p{
-    color: #FFF;
+    color: #f44336;
     font-size: 3em;
     text-align: center;
     margin: 0;
@@ -1082,7 +1082,7 @@ ul.simplefilter {
 .date span {
     display: block;
     line-height: 0.6em;
-    color: #fff;
+    color: #f44336;
     font-size: 1em;
     text-align: center;
     text-transform: uppercase;
@@ -1113,7 +1113,7 @@ ul.simplefilter {
 /*-- //news --*/
 /*-- contact --*/
 .contact p.wthree-ttext {
-    color: #fff;
+    color: #f44336;
 }
 .contact-w3ls-row {
     width: 70%;
@@ -1121,7 +1121,7 @@ ul.simplefilter {
 }
 .contact input[type="text"] {
     width: 48.5%;
-    color: #fff;
+    color: #f44336;
     float: left;
     background: none;
     outline: none;
@@ -1139,7 +1139,7 @@ ul.simplefilter {
     resize: none;
     width: 100%;
     background: none;
-    color: #fff;
+    color: #f44336;
     font-size: 1em;
     outline: none;
     padding: .6em .8em;
@@ -1149,7 +1149,7 @@ ul.simplefilter {
 }
 .contact input[type="submit"] {
     outline: none;
-    color: #fff;
+    color: #f44336;
     padding: 0.8em 4em;
     font-size: 1em;
     margin: 1em 0 0 0;
@@ -1167,16 +1167,16 @@ ul.simplefilter {
     border-color: #02b875;
 }
 ::-webkit-input-placeholder {
-	color:#fff !important;
+	color:#f44336 !important;
 }
 :-moz-placeholder { /* Firefox 18- */
-	color:#fff !important;
+	color:#f44336 !important;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-	color:#fff !important;
+	color:#f44336 !important;
 }
 :-ms-input-placeholder {
-	color:#fff !important;
+	color:#f44336 !important;
 }
 .map iframe {
     width: 100%;
