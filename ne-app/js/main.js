@@ -16,7 +16,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
           item => <div key={item.objectKey} className="col-md-4 col-sm-4 col-xs-6 filtr-item" data-category={item.flat ? '1' : item.house ? '2' : item.building ? '3' : item.locale ? '3' : '9'}
             data-sort={item.flat ? 'Flat' : item.house ? 'House' : item.building ? 'Building' : item.locale ? 'Locale' : '9'}>
             <div className="agileits-img">
-              <a href={item.picUrl} className="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+              <a href={item.picUrl} className="swipebox" title={item.city}>
               <img className="img-responsive " src={item.picUrl} alt="" />
               <div className="wthree-pcatn">
                 <h4>Nielsen Estate</h4>
