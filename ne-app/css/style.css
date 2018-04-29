@@ -1123,7 +1123,7 @@ ul.simplefilter {
     width: 48.5%;
     color: #0d0d26;
     float: left;
-    background: none;
+    background: rgba(255,255,255, 0.3);
     outline: none;
     font-size: 2em;
     padding: .7em 1em;
@@ -1138,7 +1138,7 @@ ul.simplefilter {
 .contact textarea {
     resize: none;
     width: 100%;
-    background: none;
+    background: rgba(255,255,255, 0.3);
     color: #0d0d26;
     font-size: 2em;
     outline: none;
@@ -1149,13 +1149,13 @@ ul.simplefilter {
 }
 .contact input[type="submit"] {
     outline: none;
-    color: #0d0d26;
+    color: white;
     padding: 0.8em 4em;
     font-size: 2em;
     margin: 1em 0 0 0;
     -webkit-appearance: none;
-    background: #02b875;
-	border: 2px solid #02b875;
+    background: #0d0d26;
+	border: 2px solid #0d0d26;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1163,8 +1163,8 @@ ul.simplefilter {
 }
 .contact input[type="submit"]:hover {
     background: none;
-    color: #02b875;
-    border-color: #02b875;
+    color: #0d0d26;
+    border-color: #0d0d26;
 }
 ::-webkit-input-placeholder {
 	color:#0d0d26 !important;
