@@ -46,7 +46,11 @@ bccRef.on("child_added", function(snap, prevChildKey) {
         					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         				</div>
         				<div className="modal-body modal-spa">
-        					<img src={items.picUrl} className="img-responsive" alt=""/>
+                  <div className="w3-content w3-display-container">
+        					  <img src={items.picUrl} className="img-responsive mySlides" alt=""/>
+                    <button class="w3-button w3-black w3-display-left" onclick="#">&#10094;</button>
+                    <button class="w3-button w3-black w3-display-right" onclick="#">&#10095;</button>
+                  </div>
         					<h4>Pris: {items.price} €</h4>
                   <h5>{items.city}</h5>
                   <p>{items.description}</p>
