@@ -20,6 +20,10 @@ window.onload = function () {
   let addTelephone = document.getElementById('addTelephone');
   let addIDnr = document.getElementById('addIDnr');
   let addPic = document.getElementById('addPic');
+  let addPic = document.getElementById('addPic2');
+  let addPic = document.getElementById('addPic3');
+  let addPic = document.getElementById('addPic4');
+  let addPic = document.getElementById('addPic5');
   let addDescription = document.getElementById('addDescription');
   let addZip = document.getElementById('addZip');
   let addCity = document.getElementById('addCity');
@@ -77,6 +81,10 @@ window.onload = function () {
           telephone: addTelephone.value,
           idNr: addIDnr.value,
           picUrl: addPic.value,
+          picUrl2: addPic2.value,
+          picUrl3: addPic3.value,
+          picUrl4: addPic4.value,
+          picUrl5: addPic5.value,
 					description: addDescription.value,
           zip: addZip.value,
           city: addCity.value,
@@ -139,6 +147,7 @@ window.onload = function () {
           let conF = confirm("Vill du radera detta objekt?");
           if (conF == true) {
           firebase.database().ref('bcc/' + key).remove();
+          addMessToTable(data);
         } else {
 
         }
