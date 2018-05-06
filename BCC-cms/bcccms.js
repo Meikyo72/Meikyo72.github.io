@@ -141,7 +141,7 @@ window.onload = function () {
 });
         function addMessToTable(data) {
 				let tr = document.createElement('tr');
-				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td><td><button type="button" class="btn btn-info btn-sm" id="deleteButton">Ta bort</button></td><td><button type="button" class="btn btn-info btn-sm" id="updateButton">Uppdatera</button></td>`;
+				tr.innerHTML = `<td>${data.internalID}</td> <td>${data.idNr}</td> <td>${data.adress}</td> <td>${data.city}</td><td><button type="button" class="btn btn-info btn-sm" id="deleteButton">Ta bort</button></td>`;
         tr.cells[4].addEventListener('click', function(){
           let key = data.objectKey;
           let conF = confirm("Vill du radera detta objekt?");
