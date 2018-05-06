@@ -148,9 +148,9 @@ window.onload = function () {
           if (conF == true) {
           firebase.database().ref('bcc/' + key).remove();
           tableBody.innerHTML='';
-            firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
-        				let data = snapshot.val();
-        				addMessToTable(data);
+          firebase.database().ref('bcc/').on('child_added', function(snapshot, prevChildKey) {
+        		let data = snapshot.val();
+        		addMessToTable(data);
         			});
         } else {
 
