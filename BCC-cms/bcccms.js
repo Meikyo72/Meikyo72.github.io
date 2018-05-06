@@ -147,6 +147,7 @@ window.onload = function () {
           let conF = confirm("Vill du radera detta objekt?");
           if (conF == true) {
           firebase.database().ref('bcc/' + key).remove();
+          sortInternalID.clicked = true;
         } else {
 
         }
