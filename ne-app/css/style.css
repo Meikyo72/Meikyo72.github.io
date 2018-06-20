@@ -39,7 +39,7 @@ body a:focus {
 /*-- banner --*/
 .w3ls-banner{
 	min-height: 799px;
-	background:url(../images/alicanteS.jpg)no-repeat center 0px;
+	background:url(../images/alicanteSS.jpg)no-repeat center 0px;
 	background-size:cover;
 	position: relative;
 }
@@ -1024,7 +1024,7 @@ ul.simplefilter {
 /*-- //blog --*/
 /*-- testimonials --*/
 .testimonials {
-    background: url(../images/1.jpg) no-repeat 0px 0px fixed;
+    background: url(../images/husBild.jpg) no-repeat 0px 0px fixed;
     background-size: cover;
 }
 .flexslider {
