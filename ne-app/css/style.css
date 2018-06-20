@@ -51,14 +51,20 @@ body a:focus {
     float: left;
 }
 .logo h1 {
-    font-size: 3.5em;
-    line-height: 1em;
+	font-family: 'Audiowide' !important, sans-serif;
+  font-size: 3.5em;
+  line-height: 1em;
 	font-weight: 300;
 }
 .logo h1 a,.logo h1 a:hover{
-    color: #FFFFFF;
+	font-family: 'Audiowide', sans-serif;
+  color: #FFFFFF;
 	text-decoration: none;
 	outline:none;
+}
+#logoGothic {
+	font-family: 'Audiowide', sans-serif !important;
+  color: #FFFFFF;
 }
 /*-- //top-header --*/
 /*-- banner-text --*/
