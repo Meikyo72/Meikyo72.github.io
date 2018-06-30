@@ -1033,6 +1033,9 @@ ul.simplefilter {
     background: url(../images/husBild.jpg) no-repeat 0px 0px fixed;
     background-size: cover;
 }
+.testimonials #testimonialsTitle {
+	color: white;
+}
 .flexslider {
     width: 60%;
     margin: 0 auto;
@@ -1041,14 +1044,14 @@ ul.simplefilter {
     margin-top: 4em;
 }
 .testimonials-grid p {
-    color: #0d0d26;
+    color: white;
     text-align: center;
     margin: 1.5em 0;
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 .testimonials-grid h5 {
     font-size: 1.5em;
-    color: #0d0d26;
+    color: white;
     text-align: center;
     font-weight: 400;
     letter-spacing: 2px;
@@ -1118,8 +1121,14 @@ ul.simplefilter {
 }
 /*-- //news --*/
 /*-- contact --*/
+.contact h3.w3title {
+	background-color: rgba(255,255,255, 0.2);
+	width: 50%;
+	margin-left: 25%;
+}
 .contact p.wthree-ttext {
     color: #0d0d26;
+		background-color: rgba(255,255,255, 0.2);
 }
 .contact-w3ls-row {
     width: 70%;
@@ -1129,7 +1138,7 @@ ul.simplefilter {
     width: 48.5%;
     color: #0d0d26;
     float: left;
-    background: rgba(255,255,255, 0.3);
+    background: rgba(255,255,255, 0.9);
     outline: none;
     font-size: 2em;
     padding: .7em 1em;
@@ -1144,7 +1153,7 @@ ul.simplefilter {
 .contact textarea {
     resize: none;
     width: 100%;
-    background: rgba(255,255,255, 0.3);
+    background: rgba(255,255,255, 0.9);
     color: #0d0d26;
     font-size: 2em;
     outline: none;
@@ -1168,7 +1177,7 @@ ul.simplefilter {
     width: 100%;
 }
 .contact input[type="submit"]:hover {
-    background: none;
+    background-color: lightgreen;
     color: #0d0d26;
     border-color: #0d0d26;
 }
