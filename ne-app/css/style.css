@@ -616,13 +616,15 @@ a.wthree-btn.w3btn2.w3btn2a {
 }
 /*-- //Nav style -- */
 /*-- banner-bottom -- */
-.serach-w3agile {
-    background: #0d0d26;
+.search-w3agile {
+    background: #FFC400;
     padding: 3em 0;
+		border-top: 40px solid #C60B1E;
+		border-bottom: 40px solid #C60B1E;
 }
 .place-grid h5 {
     font-size: 1.5em;
-    color: #fff;
+    color: black;
 }
 .sel {
     width: 100%;
@@ -635,7 +637,7 @@ a.wthree-btn.w3btn2.w3btn2a {
 }
 .place-grid input[type="submit"] {
     width: 100%;
-    background: #2b2b2b;
+    background: #C60B1E;
     border: none;
     outline: none;
     color: #fff;
@@ -1122,9 +1124,10 @@ ul.simplefilter {
 /*-- //news --*/
 /*-- contact --*/
 .contact h3.w3title {
-	background-color: rgba(255,255,255, 0.2);
+	background-color: rgba(198, 11, 30, 0.7);
 	width: 50%;
 	margin-left: 25%;
+	color: white;
 }
 .contact p.wthree-ttext {
     color: #0d0d26;
@@ -1169,17 +1172,17 @@ ul.simplefilter {
     font-size: 2em;
     margin: 1em 0 0 0;
     -webkit-appearance: none;
-    background: #0d0d26;
-	border: 2px solid #0d0d26;
+    background: #C60B1E;
+	border: 2px solid black;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
     -moz-transition: 0.5s all;
     width: 100%;
 }
 .contact input[type="submit"]:hover {
-    background-color: lightgreen;
-    color: #0d0d26;
-    border-color: #0d0d26;
+    background-color: #FFC400;
+    color: black;
+    border-color: #C60B1E;
 }
 ::-webkit-input-placeholder {
 	color:#0d0d26 !important;
