@@ -1361,6 +1361,9 @@ ul.simplefilter {
     font-weight: 300;
 }
 /*-- //about-modal --*/
+.mySlides {
+	margin-bottom: 5px;
+}
 /*-- responsive-design --*/
 @media(max-width:1280px){
 .cd-stretchy-nav {

@@ -40,9 +40,6 @@ bccRef.on("child_added", function(snap, prevChildKey) {
   }
   class ModalObject extends React.Component {
     render() {
-      <script>
-      var myShow = w3.slideshow(".mySlides", 0);
-      </script>
         let newmodallist = oDataList.map(
           items => <div  key={items.objectKey} className="modal bnr-modal fade" id={items.objectKey} tabindex="-1" role="dialog">
         		<div className="modal-dialog" role="document">
@@ -53,12 +50,10 @@ bccRef.on("child_added", function(snap, prevChildKey) {
         				<div className="modal-body modal-spa">
                   <div className="w3-content w3-display-container">
         					  <img src={items.picUrl} className="img-responsive mySlides"/>
-                    <img src={items.picUrl} className="img-responsive mySlides"/>
-                    <img src={items.picUrl} className="img-responsive mySlides"/>
-                    <img src={items.picUrl} className="img-responsive mySlides"/>
                     <img src={items.picUrl2} className="img-responsive mySlides"/>
-                    <button className="w3-button w3-black w3-display-left" onClick="myShow.previous()">&#10094;</button>
-                    <button className="w3-button w3-black w3-display-right" onClick="myShow.next()">&#10095;</button>
+                    <img src={items.picUrl3} className="img-responsive mySlides"/>
+                    <img src={items.picUrl4} className="img-responsive mySlides"/>
+                    <img src={items.picUrl5} className="img-responsive mySlides"/>
                   </div>
         					<h4>Pris: {items.price} €</h4>
                   <h5>{items.city}</h5>
