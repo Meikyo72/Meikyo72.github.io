@@ -1131,6 +1131,7 @@ ul.simplefilter {
 	width: 50%;
 	margin-left: 25%;
 	color: white;
+	visibility: hidden;
 }
 .contact p.wthree-ttext {
     color: #0d0d26;
@@ -1152,9 +1153,11 @@ ul.simplefilter {
     border: solid 1px #0d0d26;
     -webkit-appearance: none;
     display: inline-block;
+		display: none;
 }
 .contact input.email {
     float: right;
+		display: none;
 }
 .contact textarea {
     resize: none;
@@ -1167,6 +1170,7 @@ ul.simplefilter {
     border: solid 2px #0d0d26;
     min-height: 12em;
     -webkit-appearance: none;
+		display: none;
 }
 .contact input[type="submit"] {
     outline: none;

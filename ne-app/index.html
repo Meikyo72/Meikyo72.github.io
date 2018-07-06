@@ -42,6 +42,7 @@
   };
   firebase.initializeApp(config);
 </script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 <body>
 	<!-- banner -->
@@ -130,10 +131,10 @@
 					</div>
 					<div class="col-md-2 col-xs-4 place-grid">
 						<h5>Sovrum</h5>
-						<select class="sel">
+						<select class="sel" oninput="w3.filterHTML('#estatelist', '.myFilterList', this.value)">
 							<option value="">Alla</option>
-							<option value="">1</option>
-							<option value="">2</option>
+							<option value="sovrum: 13">1</option>
+							<option value="sovrum: 15">2</option>
 							<option value="">3</option>
 							<option value="">4</option>
 							<option value="">5</option>
@@ -243,7 +244,7 @@
 					<input type="text" name="First Name" placeholder="Förnamn" required="">
 					<input class="email" name="Email" type="text" placeholder="Email" required="">
 					<textarea name="Message" placeholder="Meddelande" required=""></textarea>
-					<input type="submit" value="Skicka">
+					<input onclick="window.location.href='mailto:info@nielsenestate.com'" type="submit" value="Klicka här för att kontakta oss">
 				</form>
 			</div>
 		</div>
