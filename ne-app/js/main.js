@@ -26,7 +26,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
             <button>
               <a href={'#' + item.objectKey} data-toggle="modal">Detaljerad Information</a>
             </button>
-            <p className="pHidden">Sovrum: {item.bedroom}</p>
+            <p className="pHidden">{item.bedroom}</p>
             <p className="pHidden">Stad: {item.city}</p>
             <p className="pHidden">Zon: {item.zone}</p>
           </div>
