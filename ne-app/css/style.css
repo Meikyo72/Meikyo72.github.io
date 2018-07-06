@@ -962,7 +962,7 @@ ul.simplefilter {
     letter-spacing: 2px;
 }
 .pHidden {
-	display: none;
+	visibility: hidden;
 }
 /*-- //portfolio --*/
 /*-- blog --*/
