@@ -13,7 +13,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
   class RealObject extends React.Component {
     render() {
         let newodatalist = oDataList.map(
-          item => <div key={item.objectKey} className="col-md-4 col-sm-4 col-xs-6 filtr-item sovrumFilter" data-category={item.flat ? '1' : item.house ? '2' : item.building ? '3' : item.locale ? '3' : '9'}
+          item => <div key={item.objectKey} className="col-md-4 col-sm-4 col-xs-6 filtr-item filterFilter" data-category={item.flat ? '1' : item.house ? '2' : item.building ? '3' : item.locale ? '3' : '9'}
             data-sort={item.flat ? 'Flat' : item.house ? 'House' : item.building ? 'Building' : item.locale ? 'Locale' : '9'}>
             <div className="agileits-img">
               <a href={item.picUrl} className="swipebox" title={item.city}>
@@ -26,7 +26,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
             <button>
               <a href={'#' + item.objectKey} data-toggle="modal">Detaljerad Information</a>
             </button>
-            <p className="pHidden">{item.bedroom}</p>
+            <p className="sovrumFilter">{item.bedroom}</p>
             <p className="pHidden">Stad: {item.city}</p>
             <p className="pHidden">Zon: {item.zone}</p>
           </div>
