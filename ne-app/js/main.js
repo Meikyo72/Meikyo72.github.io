@@ -54,6 +54,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
                     <img src={items.picUrl} className="img-responsive mySlides"/>
                     <img src={items.picUrl} className="img-responsive mySlides"/>
                     <img src={items.picUrl} className="img-responsive mySlides"/>
+                    <img src={items.picUrl} className="img-responsive mySlides"/>
                     <button className="w3-button w3-black w3-display-left" onClick="myShow.previous()">&#10094;</button>
                     <button className="w3-button w3-black w3-display-right" onClick="myShow.next()">&#10095;</button>
                   </div>
