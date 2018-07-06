@@ -40,7 +40,9 @@ bccRef.on("child_added", function(snap, prevChildKey) {
   }
   class ModalObject extends React.Component {
     render() {
-      //console.log(oDataList);
+      <script>
+      var myShow = w3.slideshow(".mySlides", 0);
+      </script>
         let newmodallist = oDataList.map(
           items => <div  key={items.objectKey} className="modal bnr-modal fade" id={items.objectKey} tabindex="-1" role="dialog">
         		<div className="modal-dialog" role="document">
@@ -54,7 +56,7 @@ bccRef.on("child_added", function(snap, prevChildKey) {
                     <img src={items.picUrl} className="img-responsive mySlides"/>
                     <img src={items.picUrl} className="img-responsive mySlides"/>
                     <img src={items.picUrl} className="img-responsive mySlides"/>
-                    <img src={items.picUrl} className="img-responsive mySlides"/>
+                    <img src={items.picUrl2} className="img-responsive mySlides"/>
                     <button className="w3-button w3-black w3-display-left" onClick="myShow.previous()">&#10094;</button>
                     <button className="w3-button w3-black w3-display-right" onClick="myShow.next()">&#10095;</button>
                   </div>
