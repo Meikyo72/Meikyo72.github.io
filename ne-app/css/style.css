@@ -961,6 +961,9 @@ ul.simplefilter {
     font-weight: 200;
     letter-spacing: 2px;
 }
+.pHidden {
+	display: none;
+}
 /*-- //portfolio --*/
 /*-- blog --*/
 .blog-w3lgrids {
