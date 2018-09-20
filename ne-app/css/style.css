@@ -1194,8 +1194,6 @@ ul.simplefilter {
 		border-radius: 15px;
 }
 .contact input[type="submit"]:hover {
-    background-color: #FFC400;
-    color: black;
     border-color: #C60B1E;
 }
 ::-webkit-input-placeholder {
