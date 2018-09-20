@@ -836,7 +836,7 @@ a.wthree-btn.w3btn2:hover{
 /*-- portfolio --*/
 .filtr-item {
     padding: 1em;
-		height: 100px;
+		min-height: 200px;
 }
 .item-desc {
     background-color: rgba(0,0,0,0.5);
