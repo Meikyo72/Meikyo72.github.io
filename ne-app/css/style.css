@@ -39,7 +39,7 @@ body a:focus {
 /*-- banner --*/
 .w3ls-banner{
 	min-height: 799px;
-	background:url(../images/alicanteSS.jpg)no-repeat center 0px;
+	background:url(../images/alicanteSS.jpg)no-repeat 0px 0px fixed;
 	background-size:cover;
 	position: relative;
 }
