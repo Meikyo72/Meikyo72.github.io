@@ -837,6 +837,7 @@ a.wthree-btn.w3btn2:hover{
 .filtr-item {
     padding: 1em;
 		min-height: 300px;
+		background-color: rgb(242, 242, 242);
 }
 .item-desc {
     background-color: rgba(0,0,0,0.5);
