@@ -1191,6 +1191,7 @@ ul.simplefilter {
     transition: 0.5s all;
     -moz-transition: 0.5s all;
     width: 100%;
+		border-radius: 15px;
 }
 .contact input[type="submit"]:hover {
     background-color: #FFC400;
