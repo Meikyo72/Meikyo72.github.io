@@ -1039,7 +1039,7 @@ ul.simplefilter {
     background-size: cover;
 }
 .testimonials #testimonialsTitle {
-	color: #C60B1E;
+	color: white;
 	text-shadow: 2px 2px black;
 }
 .flexslider {
@@ -1050,7 +1050,7 @@ ul.simplefilter {
     margin-top: 4em;
 }
 .testimonials-grid p {
-    color: #C60B1E;
+    color: white;
     text-align: center;
     margin: 1.5em 0;
     font-size: 1.5em;
@@ -1058,14 +1058,14 @@ ul.simplefilter {
 }
 .testimonials-grid h5 {
     font-size: 1.5em;
-    color: #C60B1E;
+    color: white;
     text-align: center;
     font-weight: 400;
     letter-spacing: 2px;
 		text-shadow: 1px 1px black;
 }
 .testimonials-grid h5 span {
-    color: #C60B1E;
+    color: white;
     font-size: 0.8em;
     margin-left: .5em;
     font-weight: 100;
