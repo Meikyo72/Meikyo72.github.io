@@ -1194,6 +1194,7 @@ ul.simplefilter {
 		border-radius: 15px;
 }
 .contact input[type="submit"]:hover {
+		transform: translate(-10px, -10px);
 		box-shadow: 5px 10px black;
 }
 ::-webkit-input-placeholder {
